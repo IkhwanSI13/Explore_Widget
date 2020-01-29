@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const linkDefault = "/";
 const linkListViewBuilder = "/WidgetListView";
 const linkListView2Builder = "/WidgetListView2";
+const linkMediaPicker = "/WidgetMediaPicker";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;

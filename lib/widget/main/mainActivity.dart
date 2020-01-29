@@ -22,6 +22,10 @@ class MainActivity extends StatelessWidget {
             }),
             button("List view with out side click", () {
               Navigator.of(context).pushNamed(linkListView2Builder);
+            }),
+            //todo-not work
+            button("MediaPicker", () {
+              Navigator.of(context).pushNamed(linkMediaPicker);
             })
           ],
         ),
@@ -43,8 +47,7 @@ Widget button(String text, Function onClick) {
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
-              border: Border.all(color: Color(0xff323031))
-          ),
+              border: Border.all(color: Color(0xff323031))),
           padding: EdgeInsets.fromLTRB(12.0, 18.0, 12.0, 18.0),
           child: Text(text),
         ),
