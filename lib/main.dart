@@ -1,6 +1,8 @@
 import 'package:explore_widget/page_route.dart';
+import 'package:explore_widget/widget/form/formActivity.dart';
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
 import 'package:explore_widget/widget/listView2/listView2Activity.dart';
+import 'package:explore_widget/widget/loaders/LoadingActivity.dart';
 import 'package:explore_widget/widget/main/mainActivity.dart';
 import 'package:explore_widget/widget/mediaPicker/mediaPickerActivity.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +39,11 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: ListView2Activity());
       case linkMediaPicker:
         return CustomPageRoute(page: MediaPickerActivity());
+      case linkForm:
+        return CustomPageRoute(page: FormActivity());
+      case linkLoading:
+        return CustomPageRoute(page: LoadingActivity());
+
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));
     }

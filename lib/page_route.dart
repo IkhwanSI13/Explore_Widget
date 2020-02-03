@@ -4,6 +4,8 @@ const linkDefault = "/";
 const linkListViewBuilder = "/WidgetListView";
 const linkListView2Builder = "/WidgetListView2";
 const linkMediaPicker = "/WidgetMediaPicker";
+const linkForm = "/WidgetForm";
+const linkLoading = "/WidgetLoading";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;

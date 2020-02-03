@@ -24,8 +24,14 @@ class MainActivity extends StatelessWidget {
               Navigator.of(context).pushNamed(linkListView2Builder);
             }),
             //todo-not work
-            button("MediaPicker", () {
+            button("On Progress | MediaPicker", () {
               Navigator.of(context).pushNamed(linkMediaPicker);
+            }),
+            button("On Progress | Copy-paste | Form", () {
+              Navigator.of(context).pushNamed(linkForm);
+            }),
+            button("On Progress | Copy-paste | Loading", () {
+              Navigator.of(context).pushNamed(linkLoading);
             })
           ],
         ),
