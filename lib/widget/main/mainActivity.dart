@@ -32,6 +32,12 @@ class MainActivity extends StatelessWidget {
             }),
             button("On Progress | Copy-paste | Loading", () {
               Navigator.of(context).pushNamed(linkLoading);
+            }),
+            button("Keyboard", () {
+              Navigator.of(context).pushNamed(linkKeyboard);
+            }),
+            button("Font", () {
+              Navigator.of(context).pushNamed(linkFont);
             })
           ],
         ),

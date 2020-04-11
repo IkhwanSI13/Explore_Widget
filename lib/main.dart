@@ -1,4 +1,6 @@
+import 'package:explore_widget/keyboard/keyboard.dart';
 import 'package:explore_widget/page_route.dart';
+import 'package:explore_widget/widget/font/fontActivity.dart';
 import 'package:explore_widget/widget/form/formActivity.dart';
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
 import 'package:explore_widget/widget/listView2/listView2Activity.dart';
@@ -43,6 +45,10 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FormActivity());
       case linkLoading:
         return CustomPageRoute(page: LoadingActivity());
+      case linkKeyboard:
+        return CustomPageRoute(page: KeyboardActivity());
+      case linkFont:
+        return CustomPageRoute(page: FontActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));
