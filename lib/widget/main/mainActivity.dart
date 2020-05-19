@@ -3,47 +3,48 @@ import 'package:flutter/material.dart';
 
 class MainActivity extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        title: Text(
-          "Explore Widget",
-          style: TextStyle(color: Colors.black),
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          title: Text(
+            "Explore Widget",
+            style: TextStyle(color: Colors.black),
+          ),
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            button("List view with in side click", () {
-              Navigator.of(context).pushNamed(linkListViewBuilder);
-            }),
-            button("List view with out side click", () {
-              Navigator.of(context).pushNamed(linkListView2Builder);
-            }),
-            //todo-not work
-            button("On Progress | MediaPicker", () {
-              Navigator.of(context).pushNamed(linkMediaPicker);
-            }),
-            button("On Progress | Copy-paste | Form", () {
-              Navigator.of(context).pushNamed(linkForm);
-            }),
-            button("On Progress | Copy-paste | Loading", () {
-              Navigator.of(context).pushNamed(linkLoading);
-            }),
-            button("Keyboard", () {
-              Navigator.of(context).pushNamed(linkKeyboard);
-            }),
-            button("Font", () {
-              Navigator.of(context).pushNamed(linkFont);
-            })
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              button("List view with in side click", () {
+                Navigator.of(context).pushNamed(linkListViewBuilder);
+              }),
+              button("List view with out side click", () {
+                Navigator.of(context).pushNamed(linkListView2Builder);
+              }),
+              //todo-not work
+              button("On Progress | MediaPicker", () {
+                Navigator.of(context).pushNamed(linkMediaPicker);
+              }),
+              button("On Progress | Copy-paste | Form", () {
+                Navigator.of(context).pushNamed(linkForm);
+              }),
+              button("On Progress | Copy-paste | Loading", () {
+                Navigator.of(context).pushNamed(linkLoading);
+              }),
+              button("Keyboard", () {
+                Navigator.of(context).pushNamed(linkKeyboard);
+              }),
+              button("Font", () {
+                Navigator.of(context).pushNamed(linkFont);
+              }),
+              button("PageView", () {
+                Navigator.of(context).pushNamed(linkPageView);
+              })
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }
 
 Widget button(String text, Function onClick) {

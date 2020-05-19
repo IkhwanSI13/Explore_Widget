@@ -7,6 +7,9 @@ import 'package:explore_widget/widget/listView2/listView2Activity.dart';
 import 'package:explore_widget/widget/loaders/LoadingActivity.dart';
 import 'package:explore_widget/widget/main/mainActivity.dart';
 import 'package:explore_widget/widget/mediaPicker/mediaPickerActivity.dart';
+import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
+import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
+import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -49,6 +52,12 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: KeyboardActivity());
       case linkFont:
         return CustomPageRoute(page: FontActivity());
+      case linkPageView:
+        return CustomPageRoute(page: PageViewActivity());
+      case linkPageViewVertical:
+        return CustomPageRoute(page: PageViewVerticalActivity());
+      case linkPageViewHorizontal:
+        return CustomPageRoute(page: PageViewHorizontalActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));

@@ -8,6 +8,9 @@ const linkForm = "/WidgetForm";
 const linkLoading = "/WidgetLoading";
 const linkKeyboard = "/Keyboard";
 const linkFont = "/Font";
+const linkPageView = "/PageView";
+const linkPageViewVertical = "/PageViewVertical";
+const linkPageViewHorizontal = "/PageViewHorizontal";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;
