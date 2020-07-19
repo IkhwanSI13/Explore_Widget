@@ -1,15 +1,17 @@
-import 'package:explore_widget/keyboard/keyboard.dart';
+import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/page_route.dart';
+import 'package:explore_widget/widget/expanded/FlexExpandedActivity.dart';
+import 'package:explore_widget/widget/expanded/FullExpandedActivity.dart';
 import 'package:explore_widget/widget/font/fontActivity.dart';
 import 'package:explore_widget/widget/form/formActivity.dart';
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
 import 'package:explore_widget/widget/listView2/listView2Activity.dart';
 import 'package:explore_widget/widget/loaders/LoadingActivity.dart';
-import 'package:explore_widget/widget/main/mainActivity.dart';
 import 'package:explore_widget/widget/mediaPicker/mediaPickerActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
+import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -48,8 +50,6 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FormActivity());
       case linkLoading:
         return CustomPageRoute(page: LoadingActivity());
-      case linkKeyboard:
-        return CustomPageRoute(page: KeyboardActivity());
       case linkFont:
         return CustomPageRoute(page: FontActivity());
       case linkPageView:
@@ -58,6 +58,12 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: PageViewVerticalActivity());
       case linkPageViewHorizontal:
         return CustomPageRoute(page: PageViewHorizontalActivity());
+      case linkSafeArea:
+        return CustomPageRoute(page: SafeAreaActivity());
+      case linkExpanded:
+        return CustomPageRoute(page: FullExpandedActivity());
+      case linkExpandedFlex:
+        return CustomPageRoute(page: FlexExpandedActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));

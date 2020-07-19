@@ -5,12 +5,14 @@ const linkListViewBuilder = "/WidgetListView";
 const linkListView2Builder = "/WidgetListView2";
 const linkMediaPicker = "/WidgetMediaPicker";
 const linkForm = "/WidgetForm";
-const linkLoading = "/WidgetLoading";
-const linkKeyboard = "/Keyboard";
+const linkLoading = "/WidgetLoading"; 
 const linkFont = "/Font";
 const linkPageView = "/PageView";
 const linkPageViewVertical = "/PageViewVertical";
 const linkPageViewHorizontal = "/PageViewHorizontal";
+const linkSafeArea = "/SafeArea";
+const linkExpanded = "/Expanded";
+const linkExpandedFlex = "/ExpandedFlex";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;

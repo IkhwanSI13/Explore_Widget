@@ -1,5 +1,5 @@
 import 'package:explore_widget/page_route.dart';
-import 'package:explore_widget/widget/main/mainActivity.dart';
+import 'package:explore_widget/mainActivity.dart';
 import 'package:flutter/material.dart';
 
 class PageViewActivity extends StatelessWidget {
