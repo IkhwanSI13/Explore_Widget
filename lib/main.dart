@@ -12,6 +12,9 @@ import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
 import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
+import 'package:explore_widget/widget/wrap/WrapActivity.dart';
+import 'package:explore_widget/widget/wrap/WrapHorizontalActivity.dart';
+import 'package:explore_widget/widget/wrap/WrapVerticalActivity.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -64,6 +67,12 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FullExpandedActivity());
       case linkExpandedFlex:
         return CustomPageRoute(page: FlexExpandedActivity());
+      case linkWrap:
+        return CustomPageRoute(page: WrapActivity());
+      case linkWrapVertical:
+        return CustomPageRoute(page: WrapVerticalActivity());
+      case linkWrapHorizontal:
+        return CustomPageRoute(page: WrapHorizontalActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));

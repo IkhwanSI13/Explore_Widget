@@ -46,6 +46,9 @@ class MainActivity extends StatelessWidget {
               }),
               button("Expanded with Flex", () {
                 Navigator.of(context).pushNamed(linkExpandedFlex);
+              }),
+              button("Wrap", () {
+                Navigator.of(context).pushNamed(linkWrap);
               })
             ],
           ),

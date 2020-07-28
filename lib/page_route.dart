@@ -13,6 +13,9 @@ const linkPageViewHorizontal = "/PageViewHorizontal";
 const linkSafeArea = "/SafeArea";
 const linkExpanded = "/Expanded";
 const linkExpandedFlex = "/ExpandedFlex";
+const linkWrap = "/Wrap";
+const linkWrapVertical = "/WrapVertical";
+const linkWrapHorizontal = "/WrapHorizontal";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;
