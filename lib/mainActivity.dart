@@ -61,6 +61,12 @@ class MainActivity extends StatelessWidget {
               }),
               button("Table", () {
                 Navigator.of(context).pushNamed(linkTable);
+              }),
+              button("Sliver App Bar", () {
+                Navigator.of(context).pushNamed(linkSliverAppBar);
+              }),
+              button("Sliver List", () {
+                Navigator.of(context).pushNamed(linkSliverList);
               })
             ],
           ),

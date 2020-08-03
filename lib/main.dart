@@ -17,6 +17,8 @@ import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
 import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
+import 'package:explore_widget/widget/sliverAppBar/SliverAppBarActivity.dart';
+import 'package:explore_widget/widget/sliverList/SliverListActivity.dart';
 import 'package:explore_widget/widget/table/TableActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapHorizontalActivity.dart';
@@ -91,6 +93,10 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FabBottomNavActivity());
       case linkTable:
         return CustomPageRoute(page: TableActivity());
+      case linkSliverAppBar:
+        return CustomPageRoute(page: SliverAppBarActivity());
+      case linkSliverList:
+        return CustomPageRoute(page: SliverListActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));

@@ -22,6 +22,8 @@ const linkFab = "/Fab";
 const linkFabOnly = "/FabOnly";
 const linkFabBottomNav = "/FabBottomNav";
 const linkTable = "/Table";
+const linkSliverAppBar = "/SliverAppBar";
+const linkSliverList = "/SliverList";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;
