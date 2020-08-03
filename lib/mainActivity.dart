@@ -58,6 +58,9 @@ class MainActivity extends StatelessWidget {
               }),
               button("Fab & Bottom Nav", () {
                 Navigator.of(context).pushNamed(linkFab);
+              }),
+              button("Table", () {
+                Navigator.of(context).pushNamed(linkTable);
               })
             ],
           ),

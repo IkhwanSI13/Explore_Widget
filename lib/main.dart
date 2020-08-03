@@ -17,6 +17,7 @@ import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
 import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
+import 'package:explore_widget/widget/table/TableActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapHorizontalActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapVerticalActivity.dart';
@@ -88,6 +89,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FabOnlyActivity());
       case linkFabBottomNav:
         return CustomPageRoute(page: FabBottomNavActivity());
+      case linkTable:
+        return CustomPageRoute(page: TableActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));
