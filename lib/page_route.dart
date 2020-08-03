@@ -18,6 +18,9 @@ const linkWrapVertical = "/WrapVertical";
 const linkWrapHorizontal = "/WrapHorizontal";
 const linkAnimatedContainer = "/AnimatedContainer";
 const linkOpacity = "/Opacity";
+const linkFab = "/Fab";
+const linkFabOnly = "/FabOnly";
+const linkFabBottomNav = "/FabBottomNav";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;

@@ -55,6 +55,9 @@ class MainActivity extends StatelessWidget {
               }),
               button("Opacity", () {
                 Navigator.of(context).pushNamed(linkOpacity);
+              }),
+              button("Fab & Bottom Nav", () {
+                Navigator.of(context).pushNamed(linkFab);
               })
             ],
           ),

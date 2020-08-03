@@ -3,6 +3,9 @@ import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/widget/animatedContainer/AnimatedActivity.dart';
 import 'package:explore_widget/widget/expanded/FlexExpandedActivity.dart';
 import 'package:explore_widget/widget/expanded/FullExpandedActivity.dart';
+import 'package:explore_widget/widget/fab/FabActivity.dart';
+import 'package:explore_widget/widget/fab/FabBottomNavActivity.dart';
+import 'package:explore_widget/widget/fab/FabOnlyActivity.dart';
 import 'package:explore_widget/widget/font/fontActivity.dart';
 import 'package:explore_widget/widget/form/formActivity.dart';
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
@@ -79,6 +82,12 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: AnimatedActivity());
       case linkOpacity:
         return CustomPageRoute(page: OpacityActivity());
+      case linkFab:
+        return CustomPageRoute(page: FabActivity());
+      case linkFabOnly:
+        return CustomPageRoute(page: FabOnlyActivity());
+      case linkFabBottomNav:
+        return CustomPageRoute(page: FabBottomNavActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));
