@@ -1,5 +1,6 @@
 import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/page_route.dart';
+import 'package:explore_widget/widget/animatedContainer/AnimatedActivity.dart';
 import 'package:explore_widget/widget/expanded/FlexExpandedActivity.dart';
 import 'package:explore_widget/widget/expanded/FullExpandedActivity.dart';
 import 'package:explore_widget/widget/font/fontActivity.dart';
@@ -73,6 +74,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: WrapVerticalActivity());
       case linkWrapHorizontal:
         return CustomPageRoute(page: WrapHorizontalActivity());
+      case linkAnimatedContainer:
+        return CustomPageRoute(page: AnimatedActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));

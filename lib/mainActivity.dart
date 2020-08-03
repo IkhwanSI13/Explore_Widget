@@ -49,6 +49,9 @@ class MainActivity extends StatelessWidget {
               }),
               button("Wrap", () {
                 Navigator.of(context).pushNamed(linkWrap);
+              }),
+              button("Animated Container", () {
+                Navigator.of(context).pushNamed(linkAnimatedContainer);
               })
             ],
           ),
