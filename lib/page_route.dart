@@ -17,6 +17,7 @@ const linkWrap = "/Wrap";
 const linkWrapVertical = "/WrapVertical";
 const linkWrapHorizontal = "/WrapHorizontal";
 const linkAnimatedContainer = "/AnimatedContainer";
+const linkOpacity = "/Opacity";
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;

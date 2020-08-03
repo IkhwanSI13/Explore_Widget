@@ -9,6 +9,7 @@ import 'package:explore_widget/widget/listView/listViewActivity.dart';
 import 'package:explore_widget/widget/listView2/listView2Activity.dart';
 import 'package:explore_widget/widget/loaders/LoadingActivity.dart';
 import 'package:explore_widget/widget/mediaPicker/mediaPickerActivity.dart';
+import 'package:explore_widget/widget/opacity/OpacityActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
@@ -76,6 +77,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: WrapHorizontalActivity());
       case linkAnimatedContainer:
         return CustomPageRoute(page: AnimatedActivity());
+      case linkOpacity:
+        return CustomPageRoute(page: OpacityActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));

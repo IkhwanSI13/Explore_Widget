@@ -52,6 +52,9 @@ class MainActivity extends StatelessWidget {
               }),
               button("Animated Container", () {
                 Navigator.of(context).pushNamed(linkAnimatedContainer);
+              }),
+              button("Opacity", () {
+                Navigator.of(context).pushNamed(linkOpacity);
               })
             ],
           ),
