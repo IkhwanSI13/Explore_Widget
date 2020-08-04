@@ -67,6 +67,9 @@ class MainActivity extends StatelessWidget {
               }),
               button("Sliver List", () {
                 Navigator.of(context).pushNamed(linkSliverList);
+              }),
+              button("Fade In Image", () {
+                Navigator.of(context).pushNamed(linkFadeInImage);
               })
             ],
           ),

@@ -6,6 +6,7 @@ import 'package:explore_widget/widget/expanded/FullExpandedActivity.dart';
 import 'package:explore_widget/widget/fab/FabActivity.dart';
 import 'package:explore_widget/widget/fab/FabBottomNavActivity.dart';
 import 'package:explore_widget/widget/fab/FabOnlyActivity.dart';
+import 'package:explore_widget/widget/fadeInImage/FadeInImageActivity.dart';
 import 'package:explore_widget/widget/font/fontActivity.dart';
 import 'package:explore_widget/widget/form/formActivity.dart';
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
@@ -97,6 +98,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: SliverAppBarActivity());
       case linkSliverList:
         return CustomPageRoute(page: SliverListActivity());
+      case linkFadeInImage:
+        return CustomPageRoute(page: FadeInImageActivity());
 
 //      case linkTopicList:
 //        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));
