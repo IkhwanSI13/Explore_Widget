@@ -70,6 +70,9 @@ class MainActivity extends StatelessWidget {
               }),
               button("Fade In Image", () {
                 Navigator.of(context).pushNamed(linkFadeInImage);
+              }),
+              button("StreamBuilder", () {
+                Navigator.of(context).pushNamed(linkStreamBuilder);
               })
             ],
           ),
