@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 const linkDefault = "/";
+const linkColumn = "/Column";
+const linkRow = "/Row";
 const linkListViewBuilder = "/WidgetListView";
 const linkListView2Builder = "/WidgetListView2";
 const linkMediaPicker = "/WidgetMediaPicker";

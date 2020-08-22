@@ -1,6 +1,7 @@
 import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/widget/animatedContainer/AnimatedActivity.dart';
+import 'package:explore_widget/widget/column/ColumnActivity.dart';
 import 'package:explore_widget/widget/expanded/FlexExpandedActivity.dart';
 import 'package:explore_widget/widget/expanded/FullExpandedActivity.dart';
 import 'package:explore_widget/widget/fab/FabActivity.dart';
@@ -17,6 +18,7 @@ import 'package:explore_widget/widget/opacity/OpacityActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
+import 'package:explore_widget/widget/row/RowActivity.dart';
 import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
 import 'package:explore_widget/widget/sliverAppBar/SliverAppBarActivity.dart';
 import 'package:explore_widget/widget/sliverList/SliverListActivity.dart';
@@ -53,6 +55,10 @@ class MyApp extends StatelessWidget {
     switch (settings.name) {
       case linkDefault:
         return CustomPageRoute(page: MainActivity());
+      case linkColumn:
+        return CustomPageRoute(page: ColumnActivity());
+      case linkRow:
+        return CustomPageRoute(page: RowActivity());
       case linkListViewBuilder:
         return CustomPageRoute(page: ListViewActivity());
       case linkListView2Builder:

@@ -16,6 +16,15 @@ class MainActivity extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+              button("Column", () {
+                Navigator.of(context).pushNamed(linkColumn);
+              }),
+              button("Row", () {
+                Navigator.of(context).pushNamed(linkRow);
+              }),
+              button("On Progress | Copy-paste | Form", () {
+                Navigator.of(context).pushNamed(linkForm);
+              }),
               button("List view with in side click", () {
                 Navigator.of(context).pushNamed(linkListViewBuilder);
               }),
@@ -25,9 +34,6 @@ class MainActivity extends StatelessWidget {
               //todo-not work
               button("On Progress | MediaPicker", () {
                 Navigator.of(context).pushNamed(linkMediaPicker);
-              }),
-              button("On Progress | Copy-paste | Form", () {
-                Navigator.of(context).pushNamed(linkForm);
               }),
               button("On Progress | Copy-paste | Loading", () {
                 Navigator.of(context).pushNamed(linkLoading);
