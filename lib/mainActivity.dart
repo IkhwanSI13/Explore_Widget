@@ -22,6 +22,9 @@ class MainActivity extends StatelessWidget {
               button("Row", () {
                 Navigator.of(context).pushNamed(linkRow);
               }),
+              button("Stack", () {
+                Navigator.of(context).pushNamed(linkStack);
+              }),
               button("On Progress | Copy-paste | Form", () {
                 Navigator.of(context).pushNamed(linkForm);
               }),

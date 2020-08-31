@@ -22,6 +22,7 @@ import 'package:explore_widget/widget/row/RowActivity.dart';
 import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
 import 'package:explore_widget/widget/sliverAppBar/SliverAppBarActivity.dart';
 import 'package:explore_widget/widget/sliverList/SliverListActivity.dart';
+import 'package:explore_widget/widget/stack/StackActivity.dart';
 import 'package:explore_widget/widget/streamBuilder/StreamBuilderActivity.dart';
 import 'package:explore_widget/widget/table/TableActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapActivity.dart';
@@ -59,6 +60,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: ColumnActivity());
       case linkRow:
         return CustomPageRoute(page: RowActivity());
+      case linkStack:
+        return CustomPageRoute(page: StackActivity());
       case linkListViewBuilder:
         return CustomPageRoute(page: ListViewActivity());
       case linkListView2Builder:
