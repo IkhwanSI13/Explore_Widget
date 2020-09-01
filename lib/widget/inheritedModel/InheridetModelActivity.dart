@@ -71,7 +71,6 @@ class ConstWidget extends StatelessWidget {
     print("Ikhwan build ConstWidget");
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         ChildOneActivity(),
         ChildTwoActivity(),

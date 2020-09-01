@@ -1,6 +1,7 @@
 import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/widget/animatedContainer/AnimatedActivity.dart';
+import 'package:explore_widget/widget/clipRect/CliprRectActivity.dart';
 import 'package:explore_widget/widget/column/ColumnActivity.dart';
 import 'package:explore_widget/widget/expanded/FlexExpandedActivity.dart';
 import 'package:explore_widget/widget/expanded/FullExpandedActivity.dart';
@@ -68,6 +69,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: InheritedWidgetActivity());
       case linkInheritedModel:
         return CustomPageRoute(page: InheritedModelActivity());
+      case linkClipRect:
+        return CustomPageRoute(page: ClipRectActivity());
       case linkListViewBuilder:
         return CustomPageRoute(page: ListViewActivity());
       case linkListView2Builder:

@@ -31,6 +31,9 @@ class MainActivity extends StatelessWidget {
               button("InheritedModel", () {
                 Navigator.of(context).pushNamed(linkInheritedModel);
               }),
+              button("ClipRect", () {
+                Navigator.of(context).pushNamed(linkClipRect);
+              }),
               button("On Progress | Copy-paste | Form", () {
                 Navigator.of(context).pushNamed(linkForm);
               }),

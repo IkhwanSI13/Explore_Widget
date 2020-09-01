@@ -6,6 +6,7 @@ const linkRow = "/Row";
 const linkStack = "/Stack";
 const linkInheritedWidget = "/InheritedWidget";
 const linkInheritedModel = "/InheritedModel";
+const linkClipRect = "/ClipRect";
 const linkListViewBuilder = "/WidgetListView";
 const linkListView2Builder = "/WidgetListView2";
 const linkMediaPicker = "/WidgetMediaPicker";
