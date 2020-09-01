@@ -37,6 +37,9 @@ class MainActivity extends StatelessWidget {
               button("Hero", () {
                 Navigator.of(context).pushNamed(linkHero);
               }),
+              button("Tooltip", () {
+                Navigator.of(context).pushNamed(linkTooltip);
+              }),
               button("On Progress | Copy-paste | Form", () {
                 Navigator.of(context).pushNamed(linkForm);
               }),

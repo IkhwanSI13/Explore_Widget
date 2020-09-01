@@ -29,6 +29,7 @@ import 'package:explore_widget/widget/sliverList/SliverListActivity.dart';
 import 'package:explore_widget/widget/stack/StackActivity.dart';
 import 'package:explore_widget/widget/streamBuilder/StreamBuilderActivity.dart';
 import 'package:explore_widget/widget/table/TableActivity.dart';
+import 'package:explore_widget/widget/tooltip/TooltipActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapHorizontalActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapVerticalActivity.dart';
@@ -41,20 +42,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Widget',
-//      theme: _theme(),
       onGenerateRoute: _getRoute,
     );
   }
 
-//  ThemeData _theme() {
-//    return ThemeData(
-//      appBarTheme:
-//      AppBarTheme(textTheme: TextTheme(title: TextStyle14_Grey2_Lato)),
-//      textTheme: TextTheme(
-//          title: TextStyle14_Grey2_Lato, body1: TextStyle14_Grey2_Lato),
-//    );
-//  }
-
+  ///customPaint
   Route _getRoute(RouteSettings settings) {
     final Map<String, dynamic> arguments = settings.arguments;
     switch (settings.name) {
@@ -76,6 +68,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: HeroActivity());
       case linkHeroDetail:
         return CustomPageRoute(page: HeroDetailActivity());
+      case linkTooltip:
+        return CustomPageRoute(page: TooltipActivity());
       case linkListViewBuilder:
         return CustomPageRoute(page: ListViewActivity());
       case linkListView2Builder:

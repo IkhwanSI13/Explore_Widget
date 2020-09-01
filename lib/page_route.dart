@@ -8,6 +8,7 @@ const linkInheritedWidget = "/InheritedWidget";
 const linkInheritedModel = "/InheritedModel";
 const linkClipRect = "/ClipRect";
 const linkHero = "/ClipHero";
+const linkTooltip = "/Tooltip";
 const linkHeroDetail = "/ClipHeroDetail";
 const linkListViewBuilder = "/WidgetListView";
 const linkListView2Builder = "/WidgetListView2";
