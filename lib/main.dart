@@ -11,6 +11,7 @@ import 'package:explore_widget/widget/fab/FabOnlyActivity.dart';
 import 'package:explore_widget/widget/fadeInImage/FadeInImageActivity.dart';
 import 'package:explore_widget/widget/font/fontActivity.dart';
 import 'package:explore_widget/widget/form/formActivity.dart';
+import 'package:explore_widget/widget/hero/HeroActivity.dart';
 import 'package:explore_widget/widget/inherited/InheritedActivity.dart';
 import 'package:explore_widget/widget/inheritedModel/InheridetModelActivity.dart';
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
@@ -71,6 +72,10 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: InheritedModelActivity());
       case linkClipRect:
         return CustomPageRoute(page: ClipRectActivity());
+      case linkHero:
+        return CustomPageRoute(page: HeroActivity());
+      case linkHeroDetail:
+        return CustomPageRoute(page: HeroDetailActivity());
       case linkListViewBuilder:
         return CustomPageRoute(page: ListViewActivity());
       case linkListView2Builder:
