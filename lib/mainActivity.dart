@@ -25,6 +25,12 @@ class MainActivity extends StatelessWidget {
               button("Stack", () {
                 Navigator.of(context).pushNamed(linkStack);
               }),
+              button("InheritedWidget", () {
+                Navigator.of(context).pushNamed(linkInheritedWidget);
+              }),
+              button("InheritedModel", () {
+                Navigator.of(context).pushNamed(linkInheritedModel);
+              }),
               button("On Progress | Copy-paste | Form", () {
                 Navigator.of(context).pushNamed(linkForm);
               }),

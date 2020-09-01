@@ -10,6 +10,8 @@ import 'package:explore_widget/widget/fab/FabOnlyActivity.dart';
 import 'package:explore_widget/widget/fadeInImage/FadeInImageActivity.dart';
 import 'package:explore_widget/widget/font/fontActivity.dart';
 import 'package:explore_widget/widget/form/formActivity.dart';
+import 'package:explore_widget/widget/inherited/InheritedActivity.dart';
+import 'package:explore_widget/widget/inheritedModel/InheridetModelActivity.dart';
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
 import 'package:explore_widget/widget/listView2/listView2Activity.dart';
 import 'package:explore_widget/widget/loaders/LoadingActivity.dart';
@@ -62,6 +64,10 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: RowActivity());
       case linkStack:
         return CustomPageRoute(page: StackActivity());
+      case linkInheritedWidget:
+        return CustomPageRoute(page: InheritedWidgetActivity());
+      case linkInheritedModel:
+        return CustomPageRoute(page: InheritedModelActivity());
       case linkListViewBuilder:
         return CustomPageRoute(page: ListViewActivity());
       case linkListView2Builder:
