@@ -9,6 +9,7 @@ class TextColor extends InheritedModel<String> {
     @required this.colorSecondary,
     @required Widget child,
   })  : assert(colorPrimary != null),
+        assert(colorSecondary != null),
         assert(child != null),
         super(child: child);
 
@@ -39,6 +40,7 @@ class InheritedModelActivity extends StatefulWidget {
 }
 
 class InheritedModelActivityState extends State<InheritedModelActivity> {
+  var colorsPrimary = Colors.purple;
   var colorsSecondary = Colors.blue;
 
   @override
@@ -47,67 +49,97 @@ class InheritedModelActivityState extends State<InheritedModelActivity> {
       appBar: AppBar(
         title: Text("Inherited Model"),
       ),
-      body: TextColor(
-          colorPrimary: Colors.red,
-          colorSecondary: colorsSecondary,
-          child: const ConstWidget()),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            colorsSecondary = Colors.green;
-          });
-        },
-        child: Icon(Icons.add),
+      body: Container(
+        margin: EdgeInsets.only(top: 136),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            TextColor(
+                colorPrimary: colorsPrimary,
+                colorSecondary: colorsSecondary,
+                child: const WidgetB()),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  print("YukNgoding change colorPrimary");
+                  colorsPrimary = Colors.red;
+                });
+              },
+              child: Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(top: 72, bottom: 12),
+                padding: EdgeInsets.all(12),
+                child: Text("Refresh Color Primary"),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  print("YukNgoding change colorSecondary");
+                  colorsSecondary = Colors.green;
+                });
+              },
+              child: Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(12),
+                child: Text("Refresh Color Secondary"),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-class ConstWidget extends StatelessWidget {
-  const ConstWidget();
+class WidgetB extends StatelessWidget {
+  const WidgetB();
 
   @override
   Widget build(BuildContext context) {
-    print("Ikhwan build ConstWidget");
-
-    return Column(
-      children: [
-        ChildOneActivity(),
-        ChildTwoActivity(),
-      ],
-    );
-  }
-}
-
-///STATELESS One
-class ChildOneActivity extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    print("Ikhwan build ChildOneActivity");
+    print("YukNgoding build WidgetB");
     final textColor = TextColor.of(context, textOne);
 
     return Column(
       children: [
         Text(
-          "Child One",
+          "Widget B",
           style: TextStyle(color: textColor.colorPrimary),
         ),
+        WidgetC()
       ],
     );
   }
 }
 
-///STATELESS One
-class ChildTwoActivity extends StatelessWidget {
+class WidgetC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print("Ikhwan build ChildTwoActivity");
+    print("YukNgoding build WidgetC");
     final textColor = TextColor.of(context, textTwo);
 
     return Column(
       children: [
         Text(
-          "Child Two",
+          "Widget C",
+          style: TextStyle(color: textColor.colorSecondary),
+        ),
+        WidgetD()
+      ],
+    );
+  }
+}
+
+class WidgetD extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    print("YukNgoding build WidgetD");
+    final textColor = TextColor.of(context, textTwo);
+
+    return Column(
+      children: [
+        Text(
+          "Widget D",
           style: TextStyle(color: textColor.colorSecondary),
         ),
       ],

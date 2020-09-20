@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
+///Desc:
+///https://www.yukngoding.id/2020/09/02/why-do-we-need-an-inheritedwidget-in-flutter-code/
+
 class TextColor extends InheritedWidget {
   const TextColor({
-    Key key,
     @required this.colorPrimary,
     @required Widget child,
   })  : assert(colorPrimary != null),
         assert(child != null),
-        super(key: key, child: child);
+        super(child: child);
 
   final Color colorPrimary;
 
@@ -29,29 +31,26 @@ class InheritedWidgetActivity extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: TextColor(colorPrimary: Colors.red, child: ChildOneActivity()),
+      body: TextColor(colorPrimary: Colors.red, child: WidgetB()),
     );
   }
 }
 
-class ChildOneActivity extends StatelessWidget {
+class WidgetB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final textColor = TextColor.of(context);
-
     return Column(
       children: [
         Text(
           "Child One",
-          style: TextStyle(color: textColor.colorPrimary),
         ),
-        ChildTwoActivity()
+        WidgetC()
       ],
     );
   }
 }
 
-class ChildTwoActivity extends StatelessWidget {
+class WidgetC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textColor = TextColor.of(context);
@@ -62,13 +61,13 @@ class ChildTwoActivity extends StatelessWidget {
           "Child Two",
           style: TextStyle(color: textColor.colorPrimary),
         ),
-        ChildThreeActivity()
+        WidgetD()
       ],
     );
   }
 }
 
-class ChildThreeActivity extends StatelessWidget {
+class WidgetD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textColor = TextColor.of(context);
