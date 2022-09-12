@@ -31,6 +31,7 @@ class _FormActivityState extends State<FormActivity> {
                                 if (value.isEmpty) {
                                   return 'Please enter your first name';
                                 }
+                                return null;
                               },
                               onSaved: (val) =>
                                   setState(() => _user.firstName = val),
@@ -42,6 +43,7 @@ class _FormActivityState extends State<FormActivity> {
                                   if (value.isEmpty) {
                                     return 'Please enter your last name.';
                                   }
+                                  return null;
                                 },
                                 onSaved: (val) =>
                                     setState(() => _user.lastName = val)),
@@ -82,7 +84,7 @@ class _FormActivityState extends State<FormActivity> {
                             Container(
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 16.0, horizontal: 16.0),
-                                child: RaisedButton(
+                                child: ElevatedButton(
                                     onPressed: () {
                                       final form = _formKey.currentState;
                                       if (form.validate()) {
@@ -97,7 +99,7 @@ class _FormActivityState extends State<FormActivity> {
   }
 
   _showDialog(BuildContext context) {
-    Scaffold.of(context)
-        .showSnackBar(SnackBar(content: Text('Submitting form')));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text("Submitting form")));
   }
 }

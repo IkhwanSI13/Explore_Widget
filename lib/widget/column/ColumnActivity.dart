@@ -252,7 +252,7 @@ class ColumnActivityState extends State<ColumnActivity> {
                     ]))
           ])),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text('Submit'),
               onPressed: () {
                 Navigator.of(context).pop();

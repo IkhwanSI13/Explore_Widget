@@ -118,142 +118,142 @@ class RowActivityState extends State<RowActivity> {
           title: Text('Config'),
           content: SingleChildScrollView(
               child: ListBody(children: <Widget>[
-                Container(
-                    margin: EdgeInsets.only(left: 16, top: 18, right: 16),
-                    child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: <Widget>[
-                          DropdownButtonFormField<MainAxisAlignment>(
-                            isExpanded: true,
-                            hint: Text(
-                              "MainAxisAlignment",
+            Container(
+                margin: EdgeInsets.only(left: 16, top: 18, right: 16),
+                child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      DropdownButtonFormField<MainAxisAlignment>(
+                        isExpanded: true,
+                        hint: Text(
+                          "MainAxisAlignment",
+                        ),
+                        value: configMainAxisAlignment,
+                        onChanged: (MainAxisAlignment newData) {
+                          configMainAxisAlignment = newData;
+                          setState(() {});
+                        },
+                        items: listMainAxis
+                            .map<DropdownMenuItem<MainAxisAlignment>>(
+                                (MainAxisAlignment value) {
+                          return DropdownMenuItem<MainAxisAlignment>(
+                            value: value,
+                            child: Container(
+                              child: Text(value.toString()),
                             ),
-                            value: configMainAxisAlignment,
-                            onChanged: (MainAxisAlignment newData) {
-                              configMainAxisAlignment = newData;
-                              setState(() {});
-                            },
-                            items: listMainAxis
-                                .map<DropdownMenuItem<MainAxisAlignment>>(
-                                    (MainAxisAlignment value) {
-                                  return DropdownMenuItem<MainAxisAlignment>(
-                                    value: value,
-                                    child: Container(
-                                      child: Text(value.toString()),
-                                    ),
-                                  );
-                                }).toList(),
-                          ),
-                          DropdownButtonFormField<MainAxisSize>(
-                            isExpanded: true,
-                            hint: Text(
-                              "MainAxisSize",
+                          );
+                        }).toList(),
+                      ),
+                      DropdownButtonFormField<MainAxisSize>(
+                        isExpanded: true,
+                        hint: Text(
+                          "MainAxisSize",
+                        ),
+                        value: configMainAxisSize,
+                        onChanged: (MainAxisSize newData) {
+                          configMainAxisSize = newData;
+                          setState(() {});
+                        },
+                        items: listMainAxisSize
+                            .map<DropdownMenuItem<MainAxisSize>>(
+                                (MainAxisSize value) {
+                          return DropdownMenuItem<MainAxisSize>(
+                            value: value,
+                            child: Container(
+                              child: Text(value.toString()),
                             ),
-                            value: configMainAxisSize,
-                            onChanged: (MainAxisSize newData) {
-                              configMainAxisSize = newData;
-                              setState(() {});
-                            },
-                            items: listMainAxisSize
-                                .map<DropdownMenuItem<MainAxisSize>>(
-                                    (MainAxisSize value) {
-                                  return DropdownMenuItem<MainAxisSize>(
-                                    value: value,
-                                    child: Container(
-                                      child: Text(value.toString()),
-                                    ),
-                                  );
-                                }).toList(),
-                          ),
-                          DropdownButtonFormField<CrossAxisAlignment>(
-                            isExpanded: true,
-                            hint: Text(
-                              "CrossAxisAlignment",
+                          );
+                        }).toList(),
+                      ),
+                      DropdownButtonFormField<CrossAxisAlignment>(
+                        isExpanded: true,
+                        hint: Text(
+                          "CrossAxisAlignment",
+                        ),
+                        value: configCrossAxis,
+                        onChanged: (CrossAxisAlignment newData) {
+                          configCrossAxis = newData;
+                          setState(() {});
+                        },
+                        items: listCrossAxis
+                            .map<DropdownMenuItem<CrossAxisAlignment>>(
+                                (CrossAxisAlignment value) {
+                          return DropdownMenuItem<CrossAxisAlignment>(
+                            value: value,
+                            child: Container(
+                              child: Text(value.toString()),
                             ),
-                            value: configCrossAxis,
-                            onChanged: (CrossAxisAlignment newData) {
-                              configCrossAxis = newData;
-                              setState(() {});
-                            },
-                            items: listCrossAxis
-                                .map<DropdownMenuItem<CrossAxisAlignment>>(
-                                    (CrossAxisAlignment value) {
-                                  return DropdownMenuItem<CrossAxisAlignment>(
-                                    value: value,
-                                    child: Container(
-                                      child: Text(value.toString()),
-                                    ),
-                                  );
-                                }).toList(),
-                          ),
-                          DropdownButtonFormField<TextDirection>(
-                            isExpanded: true,
-                            hint: Text(
-                              "TextDirection",
+                          );
+                        }).toList(),
+                      ),
+                      DropdownButtonFormField<TextDirection>(
+                        isExpanded: true,
+                        hint: Text(
+                          "TextDirection",
+                        ),
+                        value: configText,
+                        onChanged: (TextDirection newData) {
+                          configText = newData;
+                          setState(() {});
+                        },
+                        items: listTextDirection
+                            .map<DropdownMenuItem<TextDirection>>(
+                                (TextDirection value) {
+                          return DropdownMenuItem<TextDirection>(
+                            value: value,
+                            child: Container(
+                              child: Text(value.toString()),
                             ),
-                            value: configText,
-                            onChanged: (TextDirection newData) {
-                              configText = newData;
-                              setState(() {});
-                            },
-                            items: listTextDirection
-                                .map<DropdownMenuItem<TextDirection>>(
-                                    (TextDirection value) {
-                                  return DropdownMenuItem<TextDirection>(
-                                    value: value,
-                                    child: Container(
-                                      child: Text(value.toString()),
-                                    ),
-                                  );
-                                }).toList(),
-                          ),
-                          DropdownButtonFormField<VerticalDirection>(
-                            isExpanded: true,
-                            hint: Text(
-                              "VerticalDirection",
+                          );
+                        }).toList(),
+                      ),
+                      DropdownButtonFormField<VerticalDirection>(
+                        isExpanded: true,
+                        hint: Text(
+                          "VerticalDirection",
+                        ),
+                        value: configVerticalDirection,
+                        onChanged: (VerticalDirection newData) {
+                          configVerticalDirection = newData;
+                          setState(() {});
+                        },
+                        items: listVerticalDirection
+                            .map<DropdownMenuItem<VerticalDirection>>(
+                                (VerticalDirection value) {
+                          return DropdownMenuItem<VerticalDirection>(
+                            value: value,
+                            child: Container(
+                              child: Text(value.toString()),
                             ),
-                            value: configVerticalDirection,
-                            onChanged: (VerticalDirection newData) {
-                              configVerticalDirection = newData;
-                              setState(() {});
-                            },
-                            items: listVerticalDirection
-                                .map<DropdownMenuItem<VerticalDirection>>(
-                                    (VerticalDirection value) {
-                                  return DropdownMenuItem<VerticalDirection>(
-                                    value: value,
-                                    child: Container(
-                                      child: Text(value.toString()),
-                                    ),
-                                  );
-                                }).toList(),
-                          ),
-                          DropdownButtonFormField<TextBaseline>(
-                            isExpanded: true,
-                            hint: Text(
-                              "TextBaseline",
+                          );
+                        }).toList(),
+                      ),
+                      DropdownButtonFormField<TextBaseline>(
+                        isExpanded: true,
+                        hint: Text(
+                          "TextBaseline",
+                        ),
+                        value: configTextBaseline,
+                        onChanged: (TextBaseline newData) {
+                          configTextBaseline = newData;
+                          setState(() {});
+                        },
+                        items: listTextBaseline
+                            .map<DropdownMenuItem<TextBaseline>>(
+                                (TextBaseline value) {
+                          return DropdownMenuItem<TextBaseline>(
+                            value: value,
+                            child: Container(
+                              child: Text(value.toString()),
                             ),
-                            value: configTextBaseline,
-                            onChanged: (TextBaseline newData) {
-                              configTextBaseline = newData;
-                              setState(() {});
-                            },
-                            items: listTextBaseline
-                                .map<DropdownMenuItem<TextBaseline>>(
-                                    (TextBaseline value) {
-                                  return DropdownMenuItem<TextBaseline>(
-                                    value: value,
-                                    child: Container(
-                                      child: Text(value.toString()),
-                                    ),
-                                  );
-                                }).toList(),
-                          )
-                        ]))
-              ])),
+                          );
+                        }).toList(),
+                      )
+                    ]))
+          ])),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text('Submit'),
               onPressed: () {
                 Navigator.of(context).pop();

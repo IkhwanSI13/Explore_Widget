@@ -25,7 +25,7 @@ class HeroActivity extends StatelessWidget {
                   child: Container(
                 width: 72,
                 height: 72,
-                child: Image.network("https://ikhwankoto.com/img/pp.jpg"),
+                child: Image.network("https://www.yukngoding.id/me/img/pp.jpg"),
               )),
             ),
           )
@@ -59,7 +59,7 @@ class HeroDetailActivity extends StatelessWidget {
                       child: Container(
                         width: 172,
                         height: 172,
-                        child: Image.network("https://ikhwankoto.com/img/pp.jpg"),
+                        child: Image.network("https://www.yukngoding.id/me/img/pp.jpg"),
                       ))),
             ),
           )

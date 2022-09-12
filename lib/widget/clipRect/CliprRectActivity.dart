@@ -40,14 +40,14 @@ class ClipRectActivity extends StatelessWidget {
             child: Container(
               width: 72,
               height: 72,
-              child: Image.network("https://ikhwankoto.com/img/pp.jpg"),
+              child: Image.network("https://www.yukngoding.id/me/img/pp.jpg"),
             ),
           ),
           ClipOval(
               child: Container(
             width: 72,
             height: 72,
-            child: Image.network("https://ikhwankoto.com/img/pp.jpg"),
+            child: Image.network("https://www.yukngoding.id/me/img/pp.jpg"),
           ))
         ],
       ),

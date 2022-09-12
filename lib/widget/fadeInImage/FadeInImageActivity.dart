@@ -19,7 +19,7 @@ class FadeInImageActivityState extends State<FadeInImageActivity> {
         width: 240,
         height: 240,
         placeholder: "assets/images/ic_yukngoding.png",
-        image: "http://ikhwankoto.com/img/pp.jpg",
+        image: "https://www.yukngoding.id/me/img/pp.jpg",
       ),
     );
   }
