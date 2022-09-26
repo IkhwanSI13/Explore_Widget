@@ -1,4 +1,4 @@
-import 'package:explore_widget/mainActivity.dart';
+import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:flutter/material.dart';
 
@@ -18,10 +18,10 @@ class WrapActivity extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            button("Wrap vertical", () {
+            MyButton("Wrap vertical", () {
               Navigator.of(context).pushNamed(linkWrapVertical);
             }),
-            button("Wrap horizontal", () {
+            MyButton("Wrap horizontal", () {
               Navigator.of(context).pushNamed(linkWrapHorizontal);
             }),
           ],

@@ -1,5 +1,5 @@
+import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/page_route.dart';
-import 'package:explore_widget/mainActivity.dart';
 import 'package:flutter/material.dart';
 
 class PageViewActivity extends StatelessWidget {
@@ -17,10 +17,10 @@ class PageViewActivity extends StatelessWidget {
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-            button("PageView Vertical", () {
+            MyButton("PageView Vertical", () {
               Navigator.of(context).pushNamed(linkPageViewVertical);
             }),
-            button("PageView Horizontal", () {
+            MyButton("PageView Horizontal", () {
               Navigator.of(context).pushNamed(linkPageViewHorizontal);
             })
           ])));

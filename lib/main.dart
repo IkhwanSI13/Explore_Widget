@@ -1,6 +1,11 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:explore_widget/mainActivity.dart';
+import 'package:explore_widget/nonWidget/linearGradient/LinearGradientActivity.dart';
 import 'package:explore_widget/page_route.dart';
+import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
 import 'package:explore_widget/widget/animatedContainer/AnimatedActivity.dart';
+import 'package:explore_widget/widget/autoComplete/AutoCompleteActivity.dart';
+import 'package:explore_widget/widget/button/ButtonActivity.dart';
 import 'package:explore_widget/widget/clipRect/CliprRectActivity.dart';
 import 'package:explore_widget/widget/column/ColumnActivity.dart';
 import 'package:explore_widget/widget/expanded/FlexExpandedActivity.dart';
@@ -40,10 +45,15 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Widget',
-      onGenerateRoute: _getRoute,
-    );
+    return DevicePreview(
+        enabled: true,
+        builder: (_) => MaterialApp(
+              useInheritedMediaQuery: true,
+              locale: DevicePreview.locale(context),
+              builder: DevicePreview.appBuilder,
+              title: 'Widget',
+              onGenerateRoute: _getRoute,
+            ));
   }
 
   ///customPaint
@@ -52,12 +62,16 @@ class MyApp extends StatelessWidget {
     switch (settings.name) {
       case linkDefault:
         return CustomPageRoute(page: MainActivity());
+      case linkAutoComplete:
+        return CustomPageRoute(page: AutoCompleteActivity());
       case linkColumn:
         return CustomPageRoute(page: ColumnActivity());
       case linkRow:
         return CustomPageRoute(page: RowActivity());
       case linkStack:
         return CustomPageRoute(page: StackActivity());
+      case linkButton:
+        return CustomPageRoute(page: ButtonActivity());
       case linkInheritedWidget:
         return CustomPageRoute(page: InheritedWidgetActivity());
       case linkInheritedModel:
@@ -120,9 +134,10 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FadeInImageActivity());
       case linkStreamBuilder:
         return CustomPageRoute(page: StreamBuilderActivity());
-
-//      case linkTopicList:
-//        return CustomPageRoute(page: TopicLaporanActivity(arguments[param1]));
+      case linkFlutterRatingBar:
+        return CustomPageRoute(page: FlutterRatingBarActivity());
+      case linkLinearGradient:
+        return CustomPageRoute(page: LinearGradientActivity());
     }
   }
 }

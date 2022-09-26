@@ -1,3 +1,4 @@
+import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +18,10 @@ class FabActivity extends StatelessWidget {
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-            button("Fab Only", () {
+            MyButton("Fab Only", () {
               Navigator.of(context).pushNamed(linkFabOnly);
             }),
-            button("Fab With BottomNav", () {
+            MyButton("Fab With BottomNav", () {
               Navigator.of(context).pushNamed(linkFabBottomNav);
             })
           ])));

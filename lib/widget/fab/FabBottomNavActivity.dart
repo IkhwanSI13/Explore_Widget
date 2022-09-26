@@ -1,3 +1,4 @@
+import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/mainActivity.dart';
 import 'package:flutter/material.dart';
 
@@ -63,16 +64,16 @@ class FabBottomNavActivityState extends State<FabBottomNavActivity> {
         body: Center(
           child: Column(
             children: <Widget>[
-              button("Version 1", () {
+              MyButton("Version 1", () {
                 onVersionOneClick();
               }),
-              button("Version 2", () {
+              MyButton("Version 2", () {
                 onVersionTwoClick();
               }),
-              button("Version 3", () {
+              MyButton("Version 3", () {
                 onVersionThreeClick();
               }),
-              button("Version 4", () {
+              MyButton("Version 4", () {
                 onVersionFourClick();
               })
             ],
