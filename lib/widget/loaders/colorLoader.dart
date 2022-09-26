@@ -5,7 +5,7 @@ class ColorLoader extends StatefulWidget {
   final List<Color> colors;
   final Duration duration;
 
-  ColorLoader({this.colors, this.duration});
+  ColorLoader({required this.colors, required this.duration});
 
   @override
   _ColorLoaderState createState() =>
@@ -16,7 +16,7 @@ class _ColorLoaderState extends State<ColorLoader>
     with SingleTickerProviderStateMixin {
   final List<Color> colors;
   final Duration duration;
-  Timer timer;
+  Timer? timer;
 
   _ColorLoaderState(this.colors, this.duration);
 
@@ -25,14 +25,12 @@ class _ColorLoaderState extends State<ColorLoader>
   List<ColorTween> tweenAnimations = [];
   int tweenIndex = 0;
 
-  AnimationController controller;
-  List<Animation<Color>> colorAnimations = [];
+  late AnimationController controller;
+  List<Animation<Color?>> colorAnimations = [];
 
   @override
   void initState() {
     super.initState();
-
-
 
     controller = new AnimationController(
       vsync: this,
@@ -47,7 +45,7 @@ class _ColorLoaderState extends State<ColorLoader>
         .add(ColorTween(begin: colors[colors.length - 1], end: colors[0]));
 
     for (int i = 0; i < colors.length; i++) {
-      Animation<Color> animation = tweenAnimations[i].animate(CurvedAnimation(
+      Animation<Color?> animation = tweenAnimations[i].animate(CurvedAnimation(
           parent: controller,
           curve: Interval((1 / colors.length) * (i + 1) - 0.05,
               (1 / colors.length) * (i + 1),
@@ -83,7 +81,7 @@ class _ColorLoaderState extends State<ColorLoader>
 
   @override
   void dispose() {
-    timer.cancel();
+    timer?.cancel();
     controller.dispose();
     super.dispose();
   }

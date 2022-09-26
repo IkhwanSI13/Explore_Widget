@@ -5,9 +5,9 @@ String textTwo = "Text2";
 
 class TextColor extends InheritedModel<String> {
   const TextColor({
-    @required this.colorPrimary,
-    @required this.colorSecondary,
-    @required Widget child,
+    required this.colorPrimary,
+    required this.colorSecondary,
+    required Widget child,
   })  : assert(colorPrimary != null),
         assert(colorSecondary != null),
         assert(child != null),
@@ -16,7 +16,7 @@ class TextColor extends InheritedModel<String> {
   final Color colorPrimary;
   final Color colorSecondary;
 
-  static TextColor of(BuildContext context, String aspect) {
+  static TextColor? of(BuildContext context, String aspect) {
     return InheritedModel.inheritFrom<TextColor>(context, aspect: aspect);
   }
 
@@ -104,7 +104,7 @@ class WidgetB extends StatelessWidget {
       children: [
         Text(
           "Widget B",
-          style: TextStyle(color: textColor.colorPrimary),
+          style: TextStyle(color: textColor?.colorPrimary),
         ),
         WidgetC()
       ],
@@ -122,7 +122,7 @@ class WidgetC extends StatelessWidget {
       children: [
         Text(
           "Widget C",
-          style: TextStyle(color: textColor.colorSecondary),
+          style: TextStyle(color: textColor?.colorSecondary),
         ),
         WidgetD()
       ],
@@ -140,7 +140,7 @@ class WidgetD extends StatelessWidget {
       children: [
         Text(
           "Widget D",
-          style: TextStyle(color: textColor.colorSecondary),
+          style: TextStyle(color: textColor?.colorSecondary),
         ),
       ],
     );

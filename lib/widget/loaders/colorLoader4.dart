@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class ColorLoader4 extends StatefulWidget {
-
   final Color dotOneColor;
   final Color dotTwoColor;
   final Color dotThreeColor;
@@ -11,14 +10,13 @@ class ColorLoader4 extends StatefulWidget {
   final DotType dotType;
   final Icon dotIcon;
 
-  ColorLoader4({
-    this.dotOneColor = Colors.redAccent,
-    this.dotTwoColor = Colors.green,
-    this.dotThreeColor = Colors.blueAccent,
-    this.duration = const Duration(milliseconds: 1000),
-    this.dotType = DotType.circle,
-    this.dotIcon = const Icon(Icons.blur_on)
-  });
+  ColorLoader4(
+      {this.dotOneColor = Colors.redAccent,
+      this.dotTwoColor = Colors.green,
+      this.dotThreeColor = Colors.blueAccent,
+      this.duration = const Duration(milliseconds: 1000),
+      this.dotType = DotType.circle,
+      this.dotIcon = const Icon(Icons.blur_on)});
 
   @override
   _ColorLoader4State createState() => _ColorLoader4State();
@@ -26,17 +24,16 @@ class ColorLoader4 extends StatefulWidget {
 
 class _ColorLoader4State extends State<ColorLoader4>
     with SingleTickerProviderStateMixin {
-  Animation<double> animation_1;
-  Animation<double> animation_2;
-  Animation<double> animation_3;
-  AnimationController controller;
+  late Animation<double> animation_1;
+  late Animation<double> animation_2;
+  late Animation<double> animation_3;
+  late AnimationController controller;
 
   @override
   void initState() {
     super.initState();
 
-    controller = AnimationController(
-        duration: widget.duration, vsync: this);
+    controller = AnimationController(duration: widget.duration, vsync: this);
 
     animation_1 = Tween(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(
@@ -135,7 +132,6 @@ class _ColorLoader4State extends State<ColorLoader4>
 
   @override
   void dispose() {
-
     controller.dispose();
     super.dispose();
   }
@@ -147,21 +143,34 @@ class Dot extends StatelessWidget {
   final DotType type;
   final Icon icon;
 
-  Dot({this.radius, this.color, this.type, this.icon});
+  Dot({
+    required this.radius,
+    required this.color,
+    required this.type,
+    required this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
     return new Center(
-      child: type == DotType.icon ?
-          Icon(icon.icon, color: color, size: 1.3 * radius,)
+      child: type == DotType.icon
+          ? Icon(
+              icon.icon,
+              color: color,
+              size: 1.3 * radius,
+            )
           : new Transform.rotate(
-        angle: type == DotType.diamond ? pi/4 : 0.0,
-        child: Container(
-          width: radius,
-          height: radius,
-          decoration: BoxDecoration(color: color, shape: type == DotType.circle? BoxShape.circle : BoxShape.rectangle),
-        ),
-      ),
+              angle: type == DotType.diamond ? pi / 4 : 0.0,
+              child: Container(
+                width: radius,
+                height: radius,
+                decoration: BoxDecoration(
+                    color: color,
+                    shape: type == DotType.circle
+                        ? BoxShape.circle
+                        : BoxShape.rectangle),
+              ),
+            ),
     );
   }
 }

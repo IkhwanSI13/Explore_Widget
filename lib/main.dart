@@ -14,6 +14,7 @@ import 'package:explore_widget/widget/fab/FabActivity.dart';
 import 'package:explore_widget/widget/fab/FabBottomNavActivity.dart';
 import 'package:explore_widget/widget/fab/FabOnlyActivity.dart';
 import 'package:explore_widget/widget/fadeInImage/FadeInImageActivity.dart';
+import 'package:explore_widget/widget/focusableActionDetector/FadButton.dart';
 import 'package:explore_widget/widget/font/fontActivity.dart';
 import 'package:explore_widget/widget/form/formActivity.dart';
 import 'package:explore_widget/widget/hero/HeroActivity.dart';
@@ -22,11 +23,12 @@ import 'package:explore_widget/widget/inheritedModel/InheridetModelActivity.dart
 import 'package:explore_widget/widget/listView/listViewActivity.dart';
 import 'package:explore_widget/widget/listView2/listView2Activity.dart';
 import 'package:explore_widget/widget/loaders/LoadingActivity.dart';
-import 'package:explore_widget/widget/mediaPicker/mediaPickerActivity.dart';
+import 'package:explore_widget/widget/navigationRail/NavigationRailActivity.dart';
 import 'package:explore_widget/widget/opacity/OpacityActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewHorizontalActivity.dart';
 import 'package:explore_widget/widget/pageView/PageViewVerticalActivity.dart';
+import 'package:explore_widget/widget/repaintBoundary/RepaintBoundaryActivity.dart';
 import 'package:explore_widget/widget/row/RowActivity.dart';
 import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
 import 'package:explore_widget/widget/sliverAppBar/SliverAppBarActivity.dart';
@@ -39,26 +41,37 @@ import 'package:explore_widget/widget/wrap/WrapActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapHorizontalActivity.dart';
 import 'package:explore_widget/widget/wrap/WrapVerticalActivity.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  /// Uncomment this for RepaintBoundary performance
+  // debugRepaintRainbowEnabled = true;
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DevicePreview(
-        enabled: true,
-        builder: (_) => MaterialApp(
-              useInheritedMediaQuery: true,
-              locale: DevicePreview.locale(context),
-              builder: DevicePreview.appBuilder,
-              title: 'Widget',
-              onGenerateRoute: _getRoute,
-            ));
+    return MaterialApp(
+      title: 'Widget',
+      onGenerateRoute: _getRoute,
+    );
+
+    /// Run with DevicePreview package
+    // return DevicePreview(
+    //     enabled: true,
+    //     builder: (_) => MaterialApp(
+    //           useInheritedMediaQuery: true,
+    //           locale: DevicePreview.locale(context),
+    //           builder: DevicePreview.appBuilder,
+    //           title: 'Widget',
+    //           onGenerateRoute: _getRoute,
+    //         ));
   }
 
   ///customPaint
   Route _getRoute(RouteSettings settings) {
-    final Map<String, dynamic> arguments = settings.arguments;
     switch (settings.name) {
       case linkDefault:
         return CustomPageRoute(page: MainActivity());
@@ -88,8 +101,6 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: ListViewActivity());
       case linkListView2Builder:
         return CustomPageRoute(page: ListView2Activity());
-      case linkMediaPicker:
-        return CustomPageRoute(page: MediaPickerActivity());
       case linkForm:
         return CustomPageRoute(page: FormActivity());
       case linkLoading:
@@ -138,6 +149,13 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FlutterRatingBarActivity());
       case linkLinearGradient:
         return CustomPageRoute(page: LinearGradientActivity());
+      case linkNavigationRail:
+        return CustomPageRoute(page: NavRailActivity());
+      case linkFadButton:
+        return CustomPageRoute(page: FadButtonActivity());
+      case linkRepaintBoundary:
+        return CustomPageRoute(page: RepaintBoundaryActivity());
     }
+    return CustomPageRoute(page: MainActivity());
   }
 }

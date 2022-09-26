@@ -130,9 +130,11 @@ class RowActivityState extends State<RowActivity> {
                           "MainAxisAlignment",
                         ),
                         value: configMainAxisAlignment,
-                        onChanged: (MainAxisAlignment newData) {
-                          configMainAxisAlignment = newData;
-                          setState(() {});
+                        onChanged: (MainAxisAlignment? newData) {
+                          if (newData != null)
+                            setState(() {
+                              configMainAxisAlignment = newData;
+                            });
                         },
                         items: listMainAxis
                             .map<DropdownMenuItem<MainAxisAlignment>>(
@@ -151,9 +153,11 @@ class RowActivityState extends State<RowActivity> {
                           "MainAxisSize",
                         ),
                         value: configMainAxisSize,
-                        onChanged: (MainAxisSize newData) {
-                          configMainAxisSize = newData;
-                          setState(() {});
+                        onChanged: (MainAxisSize? newData) {
+                          if (newData != null)
+                            setState(() {
+                              configMainAxisSize = newData;
+                            });
                         },
                         items: listMainAxisSize
                             .map<DropdownMenuItem<MainAxisSize>>(
@@ -172,9 +176,11 @@ class RowActivityState extends State<RowActivity> {
                           "CrossAxisAlignment",
                         ),
                         value: configCrossAxis,
-                        onChanged: (CrossAxisAlignment newData) {
-                          configCrossAxis = newData;
-                          setState(() {});
+                        onChanged: (CrossAxisAlignment? newData) {
+                          if (newData != null)
+                            setState(() {
+                              configCrossAxis = newData;
+                            });
                         },
                         items: listCrossAxis
                             .map<DropdownMenuItem<CrossAxisAlignment>>(
@@ -193,9 +199,11 @@ class RowActivityState extends State<RowActivity> {
                           "TextDirection",
                         ),
                         value: configText,
-                        onChanged: (TextDirection newData) {
-                          configText = newData;
-                          setState(() {});
+                        onChanged: (TextDirection? newData) {
+                          if (newData != null)
+                            setState(() {
+                              configText = newData;
+                            });
                         },
                         items: listTextDirection
                             .map<DropdownMenuItem<TextDirection>>(
@@ -214,9 +222,11 @@ class RowActivityState extends State<RowActivity> {
                           "VerticalDirection",
                         ),
                         value: configVerticalDirection,
-                        onChanged: (VerticalDirection newData) {
-                          configVerticalDirection = newData;
-                          setState(() {});
+                        onChanged: (VerticalDirection? newData) {
+                          if (newData != null)
+                            setState(() {
+                              configVerticalDirection = newData;
+                            });
                         },
                         items: listVerticalDirection
                             .map<DropdownMenuItem<VerticalDirection>>(
@@ -235,9 +245,11 @@ class RowActivityState extends State<RowActivity> {
                           "TextBaseline",
                         ),
                         value: configTextBaseline,
-                        onChanged: (TextBaseline newData) {
-                          configTextBaseline = newData;
-                          setState(() {});
+                        onChanged: (TextBaseline? newData) {
+                          if (newData != null)
+                            setState(() {
+                              configTextBaseline = newData;
+                            });
                         },
                         items: listTextBaseline
                             .map<DropdownMenuItem<TextBaseline>>(

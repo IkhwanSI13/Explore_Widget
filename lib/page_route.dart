@@ -11,10 +11,12 @@ const linkExpandedFlex = "/ExpandedFlex";
 const linkFab = "/Fab";
 const linkFabOnly = "/FabOnly";
 const linkFabBottomNav = "/FabBottomNav";
+const linkFadButton = "/FadButton";
 const linkFadeInImage = "/FadeInImage";
 const linkFlutterRatingBar = "/FlutterRatingBar";
+const linkFocusableActionDetector = "/FocusableActionDetector";
 const linkFont = "/Font";
-const linkForm = "/WidgetForm";
+const linkForm = "/Form";
 const linkHero = "/ClipHero";
 const linkHeroDetail = "/ClipHeroDetail";
 const linkInheritedWidget = "/InheritedWidget";
@@ -23,10 +25,11 @@ const linkLinearGradient = "/LinearGradient";
 const linkListViewBuilder = "/WidgetListView";
 const linkListView2Builder = "/WidgetListView2";
 const linkLoading = "/WidgetLoading";
-const linkMediaPicker = "/WidgetMediaPicker";
+const linkNavigationRail = "/NavigationRail";
 const linkPageView = "/PageView";
 const linkPageViewVertical = "/PageViewVertical";
 const linkPageViewHorizontal = "/PageViewHorizontal";
+const linkRepaintBoundary = "/RepaintBoundary";
 const linkRow = "/Row";
 const linkSafeArea = "/SafeArea";
 const linkSliverAppBar = "/SliverAppBar";
@@ -43,7 +46,7 @@ const linkWrapHorizontal = "/WrapHorizontal";
 class CustomPageRoute extends PageRouteBuilder {
   final Widget page;
 
-  CustomPageRoute({this.page})
+  CustomPageRoute({required this.page})
       : super(
           pageBuilder: (_, __, ___) => page,
           transitionsBuilder: (_, animation, __, child) => FadeTransition(
@@ -57,7 +60,7 @@ class CustomPageRoute extends PageRouteBuilder {
 class SlideRightRoute extends PageRouteBuilder {
   final Widget page;
 
-  SlideRightRoute({this.page})
+  SlideRightRoute({required this.page})
       : super(
           pageBuilder: (_, __, ___) => page,
           transitionsBuilder: (_, animation, __, child) => SlideTransition(

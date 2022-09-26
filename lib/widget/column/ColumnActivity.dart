@@ -129,8 +129,9 @@ class ColumnActivityState extends State<ColumnActivity> {
                           "MainAxisAlignment",
                         ),
                         value: configMainAxisAlignment,
-                        onChanged: (MainAxisAlignment newData) {
-                          configMainAxisAlignment = newData;
+                        onChanged: (MainAxisAlignment? newData) {
+                          if (newData != null)
+                            configMainAxisAlignment = newData;
                           setState(() {});
                         },
                         items: listMainAxis
@@ -150,8 +151,8 @@ class ColumnActivityState extends State<ColumnActivity> {
                           "MainAxisSize",
                         ),
                         value: configMainAxisSize,
-                        onChanged: (MainAxisSize newData) {
-                          configMainAxisSize = newData;
+                        onChanged: (MainAxisSize? newData) {
+                          if (newData != null) configMainAxisSize = newData;
                           setState(() {});
                         },
                         items: listMainAxisSize
@@ -171,8 +172,8 @@ class ColumnActivityState extends State<ColumnActivity> {
                           "CrossAxisAlignment",
                         ),
                         value: configCrossAxis,
-                        onChanged: (CrossAxisAlignment newData) {
-                          configCrossAxis = newData;
+                        onChanged: (CrossAxisAlignment? newData) {
+                          if (newData != null) configCrossAxis = newData;
                           setState(() {});
                         },
                         items: listCrossAxis
@@ -192,8 +193,8 @@ class ColumnActivityState extends State<ColumnActivity> {
                           "TextDirection",
                         ),
                         value: configText,
-                        onChanged: (TextDirection newData) {
-                          configText = newData;
+                        onChanged: (TextDirection? newData) {
+                          if (newData != null) configText = newData;
                           setState(() {});
                         },
                         items: listTextDirection
@@ -213,8 +214,9 @@ class ColumnActivityState extends State<ColumnActivity> {
                           "VerticalDirection",
                         ),
                         value: configVerticalDirection,
-                        onChanged: (VerticalDirection newData) {
-                          configVerticalDirection = newData;
+                        onChanged: (VerticalDirection? newData) {
+                          if (newData != null)
+                            configVerticalDirection = newData;
                           setState(() {});
                         },
                         items: listVerticalDirection
@@ -234,8 +236,8 @@ class ColumnActivityState extends State<ColumnActivity> {
                           "TextBaseline",
                         ),
                         value: configTextBaseline,
-                        onChanged: (TextBaseline newData) {
-                          configTextBaseline = newData;
+                        onChanged: (TextBaseline? newData) {
+                          if (newData != null) configTextBaseline = newData;
                           setState(() {});
                         },
                         items: listTextBaseline

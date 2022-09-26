@@ -5,15 +5,15 @@ import 'package:flutter/material.dart';
 
 class TextColor extends InheritedWidget {
   const TextColor({
-    @required this.colorPrimary,
-    @required Widget child,
+    required this.colorPrimary,
+    required Widget child,
   })  : assert(colorPrimary != null),
         assert(child != null),
         super(child: child);
 
   final Color colorPrimary;
 
-  static TextColor of(BuildContext context) {
+  static TextColor? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<TextColor>();
   }
 
@@ -59,7 +59,7 @@ class WidgetC extends StatelessWidget {
       children: [
         Text(
           "Child Two",
-          style: TextStyle(color: textColor.colorPrimary),
+          style: TextStyle(color: textColor?.colorPrimary),
         ),
         WidgetD()
       ],
@@ -76,7 +76,7 @@ class WidgetD extends StatelessWidget {
       children: [
         Text(
           "Child Three",
-          style: TextStyle(color: textColor.colorPrimary),
+          style: TextStyle(color: textColor?.colorPrimary),
         )
       ],
     );

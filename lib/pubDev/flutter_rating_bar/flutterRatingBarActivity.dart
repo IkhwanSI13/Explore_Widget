@@ -82,7 +82,7 @@ class FlutterRatingBarActivity extends StatelessWidget {
                       Icons.sentiment_satisfied,
                       color: Colors.lightGreen,
                     );
-                  case 4:
+                  default:
                     return Icon(
                       Icons.sentiment_very_satisfied,
                       color: Colors.green,

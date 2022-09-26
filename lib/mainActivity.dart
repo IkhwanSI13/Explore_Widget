@@ -63,11 +63,17 @@ class MainActivity extends StatelessWidget {
         MyButton("Fade In Image", () {
           Navigator.of(context).pushNamed(linkFadeInImage);
         }),
+        MyButton("FocusableActionDetector", () {
+          Navigator.of(context).pushNamed(linkFadButton);
+        }),
         MyButton("Font", () {
           Navigator.of(context).pushNamed(linkFont);
         }),
         MyButton("Hero", () {
           Navigator.of(context).pushNamed(linkHero);
+        }),
+        MyButton("Navigation Rail", () {
+          Navigator.of(context).pushNamed(linkNavigationRail);
         }),
         MyButton("List view with in side click", () {
           Navigator.of(context).pushNamed(linkListViewBuilder);
@@ -104,13 +110,16 @@ class MainActivity extends StatelessWidget {
         MyButton("Animated Container", () {
           Navigator.of(context).pushNamed(linkAnimatedContainer);
         }),
+        MyButton("Repaint Boundary", () {
+          Navigator.of(context).pushNamed(linkRepaintBoundary);
+        }),
+        MyButton("Loading", () {
+          Navigator.of(context).pushNamed(linkLoading);
+        }),
 
         /// todo - onProgress
         MyButton("On Progress | Copy-paste | Form", () {
           Navigator.of(context).pushNamed(linkForm);
-        }),
-        MyButton("On Progress | Copy-paste | Loading", () {
-          Navigator.of(context).pushNamed(linkLoading);
         }),
       ];
 
@@ -123,9 +132,6 @@ class MainActivity extends StatelessWidget {
   List<Widget> _getPubDevWidget(BuildContext context) => [
         MyButton("flutter_rating_bar", () {
           Navigator.of(context).pushNamed(linkFlutterRatingBar);
-        }),
-        MyButton("On Progress | MediaPicker", () {
-          Navigator.of(context).pushNamed(linkMediaPicker);
         }),
       ];
 

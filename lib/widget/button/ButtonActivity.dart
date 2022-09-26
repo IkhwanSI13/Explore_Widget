@@ -35,7 +35,7 @@ class ButtonActivity extends StatelessWidget {
                   if (states.contains(MaterialState.focused) ||
                       states.contains(MaterialState.pressed))
                     return Colors.red.withOpacity(0.12);
-                  return null; // Defer to the widget's default.
+                  return Colors.blue; // Defer to the widget's default.
                 },
               ),
             ),
@@ -110,7 +110,7 @@ class ButtonActivity extends StatelessWidget {
                       color: Theme.of(context).colorScheme.primary,
                       width: 1,
                     );
-                  return null; // Defer to the widget's default.
+                  return BorderSide();
                 },
               ),
             ),

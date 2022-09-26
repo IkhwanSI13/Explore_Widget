@@ -14,7 +14,7 @@ class LoadingActivity extends StatefulWidget {
 class LoadingActivityState extends State<LoadingActivity> {
   @override
   Widget build(BuildContext context) {
-    List<Color> colors = List();
+    List<Color> colors = [];
     colors.add(Colors.red);
 
     return Scaffold(
@@ -29,14 +29,14 @@ class LoadingActivityState extends State<LoadingActivity> {
       body: Center(
         child: Column(
           children: <Widget>[
-            Container(
+            const SizedBox(
               height: 24,
             ),
             ColorLoader(
               colors: colors,
               duration: Duration(microseconds: 1200),
             ),
-            Container(
+            const SizedBox(
               height: 24,
             ),
             ColorLoader2(
@@ -44,14 +44,14 @@ class LoadingActivityState extends State<LoadingActivity> {
               color2: Colors.blue,
               color3: Colors.green,
             ),
-            Container(
+            const SizedBox(
               height: 24,
             ),
             ColorLoader3(
               radius: 15,
               dotRadius: 6,
             ),
-            Container(
+            const SizedBox(
               height: 24,
             ),
             ColorLoader4(
@@ -60,7 +60,7 @@ class LoadingActivityState extends State<LoadingActivity> {
               dotThreeColor: Colors.green,
               dotType: DotType.square, //another
             ),
-            Container(
+            const SizedBox(
               height: 24,
             ),
             ColorLoader5(
