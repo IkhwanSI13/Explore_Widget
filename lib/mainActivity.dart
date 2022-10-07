@@ -96,6 +96,9 @@ class MainActivity extends StatelessWidget {
         MyButton("Sliver List", () {
           Navigator.of(context).pushNamed(linkSliverList);
         }),
+        MyButton("StatefulBuilder", () {
+          Navigator.of(context).pushNamed(linkStatefulBuilder);
+        }),
         MyButton("StreamBuilder", () {
           Navigator.of(context).pushNamed(linkStreamBuilder);
         }),
@@ -126,6 +129,9 @@ class MainActivity extends StatelessWidget {
   List<Widget> _getFlutterSdkNonWidget(BuildContext context) => [
         MyButton("LinearGradient", () {
           Navigator.of(context).pushNamed(linkLinearGradient);
+        }),
+        MyButton("ScaffoldMessenger", () {
+          Navigator.of(context).pushNamed(linkScaffoldMessenger);
         }),
       ];
 

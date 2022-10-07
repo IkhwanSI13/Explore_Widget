@@ -1,6 +1,8 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:explore_widget/key.dart';
 import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/nonWidget/linearGradient/LinearGradientActivity.dart';
+import 'package:explore_widget/nonWidget/scaffoldMessenger/ScaffoldMessengerActivity.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
 import 'package:explore_widget/widget/animatedContainer/AnimatedActivity.dart';
@@ -34,6 +36,7 @@ import 'package:explore_widget/widget/safeArea/SafeAreaActivity.dart';
 import 'package:explore_widget/widget/sliverAppBar/SliverAppBarActivity.dart';
 import 'package:explore_widget/widget/sliverList/SliverListActivity.dart';
 import 'package:explore_widget/widget/stack/StackActivity.dart';
+import 'package:explore_widget/widget/statefulBuilder/StatefulBuilderActivity.dart';
 import 'package:explore_widget/widget/streamBuilder/StreamBuilderActivity.dart';
 import 'package:explore_widget/widget/table/TableActivity.dart';
 import 'package:explore_widget/widget/tooltip/TooltipActivity.dart';
@@ -54,6 +57,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scaffoldMessengerKey: scaffoldKey,
       title: 'Widget',
       onGenerateRoute: _getRoute,
     );
@@ -137,10 +141,14 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FabBottomNavActivity());
       case linkTable:
         return CustomPageRoute(page: TableActivity());
+      case linkScaffoldMessenger:
+        return CustomPageRoute(page: ScaffoldMessengerActivity());
       case linkSliverAppBar:
         return CustomPageRoute(page: SliverAppBarActivity());
       case linkSliverList:
         return CustomPageRoute(page: SliverListActivity());
+      case linkStatefulBuilder:
+        return CustomPageRoute(page: StatefulBuilderActivity());
       case linkFadeInImage:
         return CustomPageRoute(page: FadeInImageActivity());
       case linkStreamBuilder:
