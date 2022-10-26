@@ -69,6 +69,9 @@ class MainActivity extends StatelessWidget {
         MyButton("Font", () {
           Navigator.of(context).pushNamed(linkFont);
         }),
+        MyButton("Form", () {
+          Navigator.of(context).pushNamed(linkForm);
+        }),
         MyButton("Hero", () {
           Navigator.of(context).pushNamed(linkHero);
         }),
@@ -118,11 +121,6 @@ class MainActivity extends StatelessWidget {
         }),
         MyButton("Loading", () {
           Navigator.of(context).pushNamed(linkLoading);
-        }),
-
-        /// todo - onProgress
-        MyButton("On Progress | Copy-paste | Form", () {
-          Navigator.of(context).pushNamed(linkForm);
         }),
       ];
 

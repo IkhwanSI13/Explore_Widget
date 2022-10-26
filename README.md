@@ -15,6 +15,7 @@ Explore All Widgets and Layout Behavior
 - FAB & BottomNav
 - Fade In Image
 - Font: [flutter.dev](https://flutter.dev/docs/cookbook/design/fonts)
+- Form (TextFormField, DropdownButton, DropdownButtonFormField, Switch, CheckBox)
 - Hero
 - NavigationRail
 - ListView.Builder with Click: [api.flutter.dev](https://api.flutter.dev/flutter/widgets/ListView/ListView.builder.html)
@@ -43,4 +44,3 @@ Explore All Widgets and Layout Behavior
 <h2>🔭 On Progress / todo list </h2>
 
 - Focus
-- Form
