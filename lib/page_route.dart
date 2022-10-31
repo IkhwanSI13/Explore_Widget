@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const linkDefault = "/";
-const linkAnimatedContainer = "/AnimatedContainer";
+const linkAnimation = "/Animation";
 const linkAutoComplete = "/AutoComplete";
 const linkButton = "/Button";
 const linkColumn = "/Column";

@@ -5,7 +5,7 @@ import 'package:explore_widget/nonWidget/linearGradient/LinearGradientActivity.d
 import 'package:explore_widget/nonWidget/scaffoldMessenger/ScaffoldMessengerActivity.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
-import 'package:explore_widget/widget/animatedContainer/AnimatedActivity.dart';
+import 'package:explore_widget/widget/animation/animationActivity.dart';
 import 'package:explore_widget/widget/autoComplete/AutoCompleteActivity.dart';
 import 'package:explore_widget/widget/button/ButtonActivity.dart';
 import 'package:explore_widget/widget/clipRect/CliprRectActivity.dart';
@@ -79,6 +79,8 @@ class MyApp extends StatelessWidget {
     switch (settings.name) {
       case linkDefault:
         return CustomPageRoute(page: MainActivity());
+      case linkAnimation:
+        return CustomPageRoute(page: AnimationActivity());
       case linkAutoComplete:
         return CustomPageRoute(page: AutoCompleteActivity());
       case linkColumn:
@@ -129,8 +131,6 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: WrapVerticalActivity());
       case linkWrapHorizontal:
         return CustomPageRoute(page: WrapHorizontalActivity());
-      case linkAnimatedContainer:
-        return CustomPageRoute(page: AnimatedActivity());
       case linkOpacity:
         return CustomPageRoute(page: OpacityActivity());
       case linkFab:

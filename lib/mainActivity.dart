@@ -48,6 +48,9 @@ class MainActivity extends StatelessWidget {
         }),
 
         ///
+        MyButton("Animation", () {
+          Navigator.of(context).pushNamed(linkAnimation);
+        }),
         MyButton("AutoComplete", () {
           Navigator.of(context).pushNamed(linkAutoComplete);
         }),
@@ -113,9 +116,6 @@ class MainActivity extends StatelessWidget {
         }),
 
         ///
-        MyButton("Animated Container", () {
-          Navigator.of(context).pushNamed(linkAnimatedContainer);
-        }),
         MyButton("Repaint Boundary", () {
           Navigator.of(context).pushNamed(linkRepaintBoundary);
         }),

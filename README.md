@@ -9,6 +9,7 @@ Explore All Widgets and Layout Behavior
 - Column, Row, Stack, Wrap
 - Expanded, Expanded with flex
 - Inherited Widget, Inherited Model
+- Animation (AnimatedAlign, AnimatedContainer, AnimatedDefaultTextStyle, AnimatedOpacity, AnimatedPadding, AnimatedPhysicalModel, AnimatedPositioned, AnimatedPositionedDirectional, AnimatedSize)
 - Auto Complete
 - Button
 - ClipRect
@@ -30,7 +31,6 @@ Explore All Widgets and Layout Behavior
 - Stream Builder
 - Table
 - Tooltip
-- Animated Container
 
 <h3>Flutter SDK non Widget</h3>
 
