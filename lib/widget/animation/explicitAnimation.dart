@@ -98,6 +98,7 @@ class _AlignTransitionState extends State<MyAlignTransition>
   }
 }
 
+///
 class MyDecoratedBoxTransition extends StatefulWidget {
   @override
   State<MyDecoratedBoxTransition> createState() =>
@@ -152,15 +153,286 @@ class _MyDecoratedBoxTransitionState extends State<MyDecoratedBoxTransition>
         ),
         Container(
           margin: contentMargin,
-          child: SizedBox(
-            height: 120,
-            child: DecoratedBoxTransition(
-              decoration: _decorationTween.animate(_controller),
-              child: Container(
-                height: 120,
-                padding: const EdgeInsets.all(10),
-                child: const FlutterLogo(),
-              ),
+          child: DecoratedBoxTransition(
+            decoration: _decorationTween.animate(_controller),
+            child: Container(
+              height: 120,
+              padding: const EdgeInsets.all(10),
+              child: const FlutterLogo(),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MyDefaultTextStyleTransition extends StatefulWidget {
+  @override
+  State<MyDefaultTextStyleTransition> createState() =>
+      _MyDefaultTextStyleTransitionState();
+}
+
+class _MyDefaultTextStyleTransitionState
+    extends State<MyDefaultTextStyleTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 500),
+  )..repeat(reverse: true);
+  TextStyleTween _styleTween = TextStyleTween(
+    begin: const TextStyle(
+        fontSize: 50, color: Colors.blue, fontWeight: FontWeight.w900),
+    end: const TextStyle(
+        fontSize: 50, color: Colors.red, fontWeight: FontWeight.w400),
+  );
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "DecoratedBoxTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          margin: contentMargin,
+          child: DefaultTextStyleTransition(
+            style: _styleTween.animate(_controller),
+            child: const Text('Flutter'),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MyFadeTransition extends StatefulWidget {
+  @override
+  State<MyFadeTransition> createState() => _MyFadeTransitionState();
+}
+
+class _MyFadeTransitionState extends State<MyFadeTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "DecoratedBoxTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          margin: contentMargin,
+          child: FadeTransition(
+            opacity: _controller,
+            child: const Padding(
+                padding: EdgeInsets.all(8),
+                child: FlutterLogo(
+                  size: 120,
+                )),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MyPositionedTransition extends StatefulWidget {
+  @override
+  State<MyPositionedTransition> createState() => _MyPositionedTransitionState();
+}
+
+class _MyPositionedTransitionState extends State<MyPositionedTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+
+  double smallLogo = 100;
+  double bigLogo = 200;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "PositionedTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          margin: contentMargin,
+          child: Container(
+            height: 220,
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+                final Size biggest = constraints.biggest;
+                return Stack(
+                  children: <Widget>[
+                    PositionedTransition(
+                      rect: RelativeRectTween(
+                        begin: RelativeRect.fromSize(
+                            Rect.fromLTWH(0, 0, smallLogo, smallLogo), biggest),
+                        end: RelativeRect.fromSize(
+                            Rect.fromLTWH(biggest.width - bigLogo,
+                                biggest.height - bigLogo, bigLogo, bigLogo),
+                            biggest),
+                      ).animate(CurvedAnimation(
+                        parent: _controller,
+                        curve: Curves.elasticInOut,
+                      )),
+                      child: const Padding(
+                          padding: EdgeInsets.all(8), child: FlutterLogo()),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MyRelativePositionedTransition extends StatefulWidget {
+  @override
+  State<MyRelativePositionedTransition> createState() =>
+      _MyRelativePositionedTransitionState();
+}
+
+class _MyRelativePositionedTransitionState
+    extends State<MyRelativePositionedTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+
+  double smallLogo = 100;
+  double bigLogo = 200;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "RelativePositionedTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          margin: contentMargin,
+          child: Container(
+            height: 220,
+            child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+                final Size biggest = constraints.biggest;
+                return Stack(
+                  children: <Widget>[
+                    RelativePositionedTransition(
+                      size: biggest,
+                      rect: RectTween(
+                        begin: Rect.fromLTWH(0, 0, bigLogo, bigLogo),
+                        end: Rect.fromLTWH(biggest.width - smallLogo,
+                            biggest.height - smallLogo, smallLogo, smallLogo),
+                      ).animate(CurvedAnimation(
+                        parent: _controller,
+                        curve: Curves.elasticInOut,
+                      )),
+                      child: const Padding(
+                          padding: EdgeInsets.all(8), child: FlutterLogo()),
+                    ),
+                  ],
+                );
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MyRotationTransition extends StatefulWidget {
+  @override
+  State<MyRotationTransition> createState() =>
+      _MyRotationTransitionState();
+}
+
+class _MyRotationTransitionState
+    extends State<MyRotationTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "RotationTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          margin: contentMargin,
+          child: RotationTransition(
+            turns: _controller,
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: FlutterLogo(size: 150.0),
             ),
           ),
         ),
