@@ -9,7 +9,9 @@ Explore All Widgets and Layout Behavior
 - Column, Row, Stack, Wrap
 - Expanded, Expanded with flex
 - Inherited Widget, Inherited Model
-- Animation (AnimatedAlign, AnimatedContainer, AnimatedDefaultTextStyle, AnimatedOpacity, AnimatedPadding, AnimatedPhysicalModel, AnimatedPositioned, AnimatedPositionedDirectional, AnimatedSize, TweenAnimationBuilder)
+- Animation 
+  - Implicit Animation (AnimatedAlign, AnimatedContainer, AnimatedDefaultTextStyle, AnimatedOpacity, AnimatedPadding, AnimatedPhysicalModel, AnimatedPositioned, AnimatedPositionedDirectional, AnimatedSize, TweenAnimationBuilder)
+  - Explicit Animation (AlignTransition, DecoratedBoxTransition)
 - Auto Complete
 - Button
 - ClipRect
