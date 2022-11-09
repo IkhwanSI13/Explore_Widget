@@ -11,7 +11,7 @@ Explore All Widgets and Layout Behavior
 - Inherited Widget, Inherited Model
 - Animation 
   - Implicit Animation (AnimatedAlign, AnimatedContainer, AnimatedDefaultTextStyle, AnimatedOpacity, AnimatedPadding, AnimatedPhysicalModel, AnimatedPositioned, AnimatedPositionedDirectional, AnimatedSize, TweenAnimationBuilder)
-  - Explicit Animation (AlignTransition, DecoratedBoxTransition, DefaultTextStyleTransition, FadeTransition, PositionedTransition, RelativePositionedTransition, RotationTransition)
+  - Explicit Animation (AlignTransition, DecoratedBoxTransition, DefaultTextStyleTransition, FadeTransition, PositionedTransition, RelativePositionedTransition, RotationTransition, ScaleTransition, SizeTransition, SlideTransition)
 - Auto Complete
 - Button
 - ClipRect

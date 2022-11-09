@@ -398,12 +398,10 @@ class _MyRelativePositionedTransitionState
 ///
 class MyRotationTransition extends StatefulWidget {
   @override
-  State<MyRotationTransition> createState() =>
-      _MyRotationTransitionState();
+  State<MyRotationTransition> createState() => _MyRotationTransitionState();
 }
 
-class _MyRotationTransitionState
-    extends State<MyRotationTransition>
+class _MyRotationTransitionState extends State<MyRotationTransition>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
@@ -430,6 +428,172 @@ class _MyRotationTransitionState
           margin: contentMargin,
           child: RotationTransition(
             turns: _controller,
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: FlutterLogo(size: 150.0),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MyScaleTransition extends StatefulWidget {
+  @override
+  State<MyScaleTransition> createState() => _MyScaleTransitionState();
+}
+
+class _MyScaleTransitionState extends State<MyScaleTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "ScaleTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          margin: contentMargin,
+          child: ScaleTransition(
+            scale: _controller,
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: FlutterLogo(size: 150.0),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MySizeTransition extends StatefulWidget {
+  @override
+  State<MySizeTransition> createState() => _MySizeTransition();
+}
+
+class _MySizeTransition extends State<MySizeTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  );
+  late final Animation<double> _animation = CurvedAnimation(
+    parent: _controller,
+    curve: Curves.fastOutSlowIn,
+  );
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "SizeTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Wrap(
+          children: [
+            SizedBox(
+              width: 145,
+              child: MyButton("forward", () {
+                _controller.forward();
+              }),
+            ),
+            SizedBox(
+              width: 145,
+              child: MyButton("reset", () {
+                _controller.reset();
+              }),
+            ),
+          ],
+        ),
+        Container(
+          margin: contentMargin,
+          child: SizeTransition(
+            sizeFactor: _animation,
+
+            /// Use axis with flexible parent size.
+            // We use CrossAxisAlignment.stretch on Column as parent,
+            // so if we set the axis to Axis.horizontal, the animation will
+            // not work
+            axis: Axis.vertical,
+
+            /// A positive value in this property will make the logo pop out
+            // from top for Axis.vertical and left for Axis.horizontal
+            // Opposite for negative value
+            axisAlignment: 4,
+            child: const Center(
+              child: FlutterLogo(size: 200.0),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+///
+class MySlideTransition extends StatefulWidget {
+  @override
+  State<MySlideTransition> createState() => _MySlideTransition();
+}
+
+class _MySlideTransition extends State<MySlideTransition>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    duration: const Duration(seconds: 2),
+    vsync: this,
+  )..repeat(reverse: true);
+  late final Animation<Offset> _offsetAnimation = Tween<Offset>(
+    begin: Offset.zero,
+    end: const Offset(1.5, 1.5),
+  ).animate(_controller);
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        MySubTitle(
+          "SlideTransition",
+          margin: EdgeInsets.only(bottom: 8),
+          color: Colors.lightBlueAccent,
+        ),
+        Container(
+          margin: contentMargin,
+          child: SlideTransition(
+            position: _offsetAnimation,
             child: const Padding(
               padding: EdgeInsets.all(8.0),
               child: FlutterLogo(size: 150.0),
