@@ -5,6 +5,7 @@ import 'package:explore_widget/commons/myTitle.dart';
 import 'package:flutter/material.dart';
 
 part "explicitAnimation.dart";
+
 part "implicitAnimation.dart";
 
 final EdgeInsets contentMargin = EdgeInsets.symmetric(
@@ -79,6 +80,27 @@ class _AnimationActivityState extends State<AnimationActivity> {
             MyScaleTransition(),
             MySizeTransition(),
             MySlideTransition(),
+            AlignRotateTransition(),
+
+            ///
+            MySubTitle(
+              "AnimatedBuilder widgets",
+              margin: EdgeInsets.only(
+                top: 4,
+                bottom: 8,
+              ),
+            ),
+            MyAnimatedBuilder(),
+
+            ///
+            MySubTitle(
+              "AnimatedWidget Class",
+              margin: EdgeInsets.only(
+                top: 4,
+                bottom: 8,
+              ),
+            ),
+            MyAnimatedWidget(),
           ],
         ),
       ),

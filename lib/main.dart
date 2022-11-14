@@ -5,6 +5,8 @@ import 'package:explore_widget/nonWidget/linearGradient/LinearGradientActivity.d
 import 'package:explore_widget/nonWidget/scaffoldMessenger/ScaffoldMessengerActivity.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
+import 'package:explore_widget/pubDev/lottie/lottieActivity.dart';
+import 'package:explore_widget/pubDev/rive/riveActivity.dart';
 import 'package:explore_widget/widget/animation/animationActivity.dart';
 import 'package:explore_widget/widget/autoComplete/AutoCompleteActivity.dart';
 import 'package:explore_widget/widget/button/ButtonActivity.dart';
@@ -163,6 +165,10 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: FadButtonActivity());
       case linkRepaintBoundary:
         return CustomPageRoute(page: RepaintBoundaryActivity());
+      case linkLottie:
+        return CustomPageRoute(page: LottieActivity());
+      case linkRive:
+        return CustomPageRoute(page: RiveActivity());
     }
     return CustomPageRoute(page: MainActivity());
   }

@@ -11,7 +11,7 @@ Explore All Widgets and Layout Behavior
 - Inherited Widget, Inherited Model
 - Animation 
   - Implicit Animation (AnimatedAlign, AnimatedContainer, AnimatedDefaultTextStyle, AnimatedOpacity, AnimatedPadding, AnimatedPhysicalModel, AnimatedPositioned, AnimatedPositionedDirectional, AnimatedSize, TweenAnimationBuilder)
-  - Explicit Animation (AlignTransition, DecoratedBoxTransition, DefaultTextStyleTransition, FadeTransition, PositionedTransition, RelativePositionedTransition, RotationTransition, ScaleTransition, SizeTransition, SlideTransition)
+  - Explicit Animation (AlignTransition, DecoratedBoxTransition, DefaultTextStyleTransition, FadeTransition, PositionedTransition, RelativePositionedTransition, RotationTransition, ScaleTransition, SizeTransition, SlideTransition, AnimatedBuilder, AnimatedWidget)
 - Auto Complete
 - Button
 - ClipRect
@@ -46,3 +46,5 @@ Explore All Widgets and Layout Behavior
 <h2>🔭 On Progress / todo list </h2>
 
 - Focus
+- Lottie
+- Rive

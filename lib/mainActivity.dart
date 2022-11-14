@@ -6,7 +6,7 @@ class MainActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: SingleChildScrollView(
-          padding: EdgeInsets.only(top: 36.0),
+          padding: EdgeInsets.symmetric(vertical: 36.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -136,6 +136,12 @@ class MainActivity extends StatelessWidget {
   List<Widget> _getPubDevWidget(BuildContext context) => [
         MyButton("flutter_rating_bar", () {
           Navigator.of(context).pushNamed(linkFlutterRatingBar);
+        }),
+        MyButton("lottie", () {
+          Navigator.of(context).pushNamed(linkLottie);
+        }),
+        MyButton("rive", () {
+          Navigator.of(context).pushNamed(linkRive);
         }),
       ];
 
