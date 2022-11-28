@@ -7,6 +7,7 @@ import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
 import 'package:explore_widget/pubDev/lottie/lottieActivity.dart';
 import 'package:explore_widget/pubDev/rive/riveActivity.dart';
+import 'package:explore_widget/widget/animation/animatedListActivity.dart';
 import 'package:explore_widget/widget/animation/animationActivity.dart';
 import 'package:explore_widget/widget/autoComplete/AutoCompleteActivity.dart';
 import 'package:explore_widget/widget/button/ButtonActivity.dart';
@@ -169,6 +170,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: LottieActivity());
       case linkRive:
         return CustomPageRoute(page: RiveActivity());
+      case linkAnimatedList:
+        return CustomPageRoute(page: MyAnimatedListSample());
     }
     return CustomPageRoute(page: MainActivity());
   }

@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/commons/myTitle.dart';
+import 'package:explore_widget/page_route.dart';
+import 'package:explore_widget/widget/animation/animatedListActivity.dart';
 import 'package:flutter/material.dart';
 
 part "explicitAnimation.dart";
@@ -50,6 +52,16 @@ class _AnimationActivityState extends State<AnimationActivity> {
             MyAnimatedPositioned(),
             MyAnimatedPositionedDirectional(),
             MyAnimatedSize(),
+            MyAnimatedCrossFade(),
+            MyAnimatedSwitcher(),
+
+            MySubTitle(
+              "AnimatedList",
+              color: Colors.lightBlueAccent,
+            ),
+            MyButton("GO", () {
+              Navigator.of(context).pushNamed(linkAnimatedList);
+            }),
 
             ///
             MySubTitle(

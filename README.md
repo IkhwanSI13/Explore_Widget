@@ -10,7 +10,7 @@ Explore All Widgets and Layout Behavior
 - Expanded, Expanded with flex
 - Inherited Widget, Inherited Model
 - Animation 
-  - Implicit Animation (AnimatedAlign, AnimatedContainer, AnimatedDefaultTextStyle, AnimatedOpacity, AnimatedPadding, AnimatedPhysicalModel, AnimatedPositioned, AnimatedPositionedDirectional, AnimatedSize, TweenAnimationBuilder)
+  - Implicit Animation (AnimatedAlign, AnimatedContainer, AnimatedDefaultTextStyle, AnimatedOpacity, AnimatedPadding, AnimatedPhysicalModel, AnimatedPositioned, AnimatedPositionedDirectional, AnimatedSize, AnimatedCrossFade, AnimatedSwitcher, AnimatedList, TweenAnimationBuilder)
   - Explicit Animation (AlignTransition, DecoratedBoxTransition, DefaultTextStyleTransition, FadeTransition, PositionedTransition, RelativePositionedTransition, RotationTransition, ScaleTransition, SizeTransition, SlideTransition, AnimatedBuilder, AnimatedWidget)
 - Auto Complete
 - Button
