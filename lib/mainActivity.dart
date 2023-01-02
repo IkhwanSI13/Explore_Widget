@@ -143,6 +143,12 @@ class MainActivity extends StatelessWidget {
         MyButton("rive", () {
           Navigator.of(context).pushNamed(linkRive);
         }),
+        MyButton("camera", () {
+          Navigator.of(context).pushNamed(linkCamera);
+        }),
+        // MyButton("camerawesome", () {
+        //   Navigator.of(context).pushNamed(linkCamerawesome);
+        // }),
       ];
 
   ///

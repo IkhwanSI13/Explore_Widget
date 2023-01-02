@@ -4,6 +4,8 @@ import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/nonWidget/linearGradient/LinearGradientActivity.dart';
 import 'package:explore_widget/nonWidget/scaffoldMessenger/ScaffoldMessengerActivity.dart';
 import 'package:explore_widget/page_route.dart';
+import 'package:explore_widget/pubDev/camera/camera2_activity.dart';
+import 'package:explore_widget/pubDev/camera/camera_activity.dart';
 import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
 import 'package:explore_widget/pubDev/lottie/lottieActivity.dart';
 import 'package:explore_widget/pubDev/rive/riveActivity.dart';
@@ -172,6 +174,9 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: RiveActivity());
       case linkAnimatedList:
         return CustomPageRoute(page: MyAnimatedListSample());
+      case linkCamera:
+        return CustomPageRoute(page: CameraExampleHome());
+        // return CustomPageRoute(page: CameraActivity());
     }
     return CustomPageRoute(page: MainActivity());
   }

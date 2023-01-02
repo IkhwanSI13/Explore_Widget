@@ -3,13 +3,13 @@ import 'dart:ui';
 import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/commons/myTitle.dart';
 import 'package:explore_widget/page_route.dart';
-import 'package:explore_widget/widget/animation/animatedListActivity.dart';
 import 'package:flutter/material.dart';
 
 part "explicitAnimation.dart";
-
 part "implicitAnimation.dart";
 
+///Why do TweenAnimationBuilder and AnimatedBuilder have a child argument?
+//https://codewithandrea.com/articles/flutter-animated-builder-child-widget-argument/
 final EdgeInsets contentMargin = EdgeInsets.symmetric(
   vertical: 18,
   horizontal: 24,
