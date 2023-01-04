@@ -6,6 +6,7 @@ import 'package:explore_widget/nonWidget/scaffoldMessenger/ScaffoldMessengerActi
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/pubDev/camera/camera2_activity.dart';
 import 'package:explore_widget/pubDev/camera/camera_activity.dart';
+import 'package:explore_widget/pubDev/camerawesome/camerawesome_activity.dart';
 import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
 import 'package:explore_widget/pubDev/lottie/lottieActivity.dart';
 import 'package:explore_widget/pubDev/rive/riveActivity.dart';
@@ -177,6 +178,8 @@ class MyApp extends StatelessWidget {
       case linkCamera:
         return CustomPageRoute(page: CameraExampleHome());
         // return CustomPageRoute(page: CameraActivity());
+      case linkCamerawesome:
+        return CustomPageRoute(page: CamerawesomeActivity());
     }
     return CustomPageRoute(page: MainActivity());
   }

@@ -1,16 +1,7 @@
 name: explore_widget
 description: Explore All Widget
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+publish_to: none
 version: 1.0.0+1
 
 environment:
@@ -27,7 +18,12 @@ dependencies:
   rive: ^0.9.1
   camera: ^0.10.1 #official
   video_player: ^2.4.10 #official
-  camerawesome: ^0.3.3
+  camerawesome:
+    git:
+      url: https://github.com/Apparence-io/camera_awesome
+      ref: 3ca70b46387e46c67b90e4f6eef40f6c3f49de07
+
+  path_provider: ^2.0.2 #official
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
