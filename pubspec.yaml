@@ -22,6 +22,7 @@ dependencies:
     git:
       url: https://github.com/Apparence-io/camera_awesome
       ref: 3ca70b46387e46c67b90e4f6eef40f6c3f49de07
+  flutter_layout_grid: ^2.0.1
 
   path_provider: ^2.0.2 #official
 

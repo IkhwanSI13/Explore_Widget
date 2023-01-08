@@ -146,9 +146,12 @@ class MainActivity extends StatelessWidget {
         MyButton("camera", () {
           Navigator.of(context).pushNamed(linkCamera);
         }),
-        MyButton("camerawesome", () {
-          Navigator.of(context).pushNamed(linkCamerawesome);
-        }),
+    MyButton("camerawesome", () {
+      Navigator.of(context).pushNamed(linkCamerawesome);
+    }),
+    MyButton("flutter_layout_grid", () {
+      Navigator.of(context).pushNamed(linkFlutterLayoutGrid);
+    }),
       ];
 
   ///

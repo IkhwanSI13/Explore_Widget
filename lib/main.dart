@@ -7,6 +7,9 @@ import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/pubDev/camera/camera2_activity.dart';
 import 'package:explore_widget/pubDev/camera/camera_activity.dart';
 import 'package:explore_widget/pubDev/camerawesome/camerawesome_activity.dart';
+import 'package:explore_widget/pubDev/flutter_layout_grid/layoutGrid1Activity.dart';
+import 'package:explore_widget/pubDev/flutter_layout_grid/layoutGrid2Activity.dart';
+import 'package:explore_widget/pubDev/flutter_layout_grid/layoutGrid3Activity.dart';
 import 'package:explore_widget/pubDev/flutter_rating_bar/flutterRatingBarActivity.dart';
 import 'package:explore_widget/pubDev/lottie/lottieActivity.dart';
 import 'package:explore_widget/pubDev/rive/riveActivity.dart';
@@ -177,9 +180,13 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: MyAnimatedListSample());
       case linkCamera:
         return CustomPageRoute(page: CameraExampleHome());
-        // return CustomPageRoute(page: CameraActivity());
+      // return CustomPageRoute(page: CameraActivity());
       case linkCamerawesome:
         return CustomPageRoute(page: CamerawesomeActivity());
+      case linkFlutterLayoutGrid:
+        // return CustomPageRoute(page: LayoutGrid1Activity());
+        // return CustomPageRoute(page: LayoutGrid2Activity());
+        return CustomPageRoute(page: LayoutGrid3Activity());
     }
     return CustomPageRoute(page: MainActivity());
   }
