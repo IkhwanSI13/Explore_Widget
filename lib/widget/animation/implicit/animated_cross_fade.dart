@@ -1,7 +1,7 @@
 import 'package:explore_widget/commons/myTitle.dart';
 import 'package:flutter/material.dart';
 
-import '../animationActivity.dart';
+import '../animation_activity.dart';
 
 class MyAnimatedCrossFade extends StatefulWidget {
   @override

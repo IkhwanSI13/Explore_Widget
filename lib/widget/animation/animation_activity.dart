@@ -1,14 +1,11 @@
-import 'dart:ui';
-
 import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/commons/myTitle.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/widget/animation/implicit/animated_align.dart';
 import 'package:flutter/material.dart';
 
+import 'explicit/explicit.dart';
 import 'implicit/implicit.dart';
-
-part 'explicit/explicitAnimation.dart';
 
 final EdgeInsets contentMargin = EdgeInsets.symmetric(
   vertical: 18,

@@ -2,7 +2,7 @@ import 'package:explore_widget/commons/myButton.dart';
 import 'package:explore_widget/commons/myTitle.dart';
 import 'package:flutter/material.dart';
 
-import '../animationActivity.dart';
+import '../animation_activity.dart';
 
 class MyAnimatedContainer extends StatefulWidget {
   @override

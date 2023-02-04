@@ -13,8 +13,8 @@ import 'package:explore_widget/pub_dev/flutter_layout_grid/layout_grid3_activity
 import 'package:explore_widget/pub_dev/flutter_rating_bar/flutter_rating_bar_activity.dart';
 import 'package:explore_widget/pub_dev/lottie/lottie_activity.dart';
 import 'package:explore_widget/pub_dev/rive/rive_activity.dart';
-import 'package:explore_widget/widget/animation/animatedListActivity.dart';
-import 'package:explore_widget/widget/animation/animationActivity.dart';
+import 'package:explore_widget/widget/animation/animated_list_activity.dart';
+import 'package:explore_widget/widget/animation/animation_activity.dart';
 import 'package:explore_widget/widget/auto_complete/auto_complete_activity.dart';
 import 'package:explore_widget/widget/button/button_activity.dart';
 import 'package:explore_widget/widget/clip_rect/clip_rect_activity.dart';

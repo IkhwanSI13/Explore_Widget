@@ -1,7 +1,7 @@
 import 'package:explore_widget/commons/myTitle.dart';
 import 'package:flutter/material.dart';
 
-import '../animationActivity.dart';
+import '../animation_activity.dart';
 
 ///Why do TweenAnimationBuilder and AnimatedBuilder have a child argument?
 //https://codewithandrea.com/articles/flutter-animated-builder-child-widget-argument/
