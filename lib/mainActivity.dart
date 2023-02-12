@@ -131,6 +131,9 @@ class MainActivity extends StatelessWidget {
         MyButton("ScaffoldMessenger", () {
           Navigator.of(context).pushNamed(linkScaffoldMessenger);
         }),
+        MyButton("WidgetBindingObserver", () {
+          Navigator.of(context).pushNamed(linkWidgetBindingObserver);
+        }),
       ];
 
   List<Widget> _getPubDevWidget(BuildContext context) => [
@@ -146,12 +149,12 @@ class MainActivity extends StatelessWidget {
         MyButton("camera", () {
           Navigator.of(context).pushNamed(linkCamera);
         }),
-    MyButton("camerawesome", () {
-      Navigator.of(context).pushNamed(linkCamerawesome);
-    }),
-    MyButton("flutter_layout_grid", () {
-      Navigator.of(context).pushNamed(linkFlutterLayoutGrid);
-    }),
+        MyButton("camerawesome", () {
+          Navigator.of(context).pushNamed(linkCamerawesome);
+        }),
+        MyButton("flutter_layout_grid", () {
+          Navigator.of(context).pushNamed(linkFlutterLayoutGrid);
+        }),
       ];
 
   ///

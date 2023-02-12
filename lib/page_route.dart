@@ -48,6 +48,7 @@ const linkTable = "/Table";
 const linkTooltip = "/Tooltip";
 const linkOpacity = "/Opacity";
 const linkWrap = "/Wrap";
+const linkWidgetBindingObserver = "/WidgetBindingObserver";
 const linkWrapVertical = "/WrapVertical";
 const linkWrapHorizontal = "/WrapHorizontal";
 

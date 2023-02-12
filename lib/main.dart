@@ -3,6 +3,7 @@ import 'package:explore_widget/key.dart';
 import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/non_widget/linear_gradient/linear_gradient_activity.dart';
 import 'package:explore_widget/non_widget/scaffold_messenger/scaffold_messenger_activity.dart';
+import 'package:explore_widget/non_widget/widget_binding_observer/widget_binding_observer.dart';
 import 'package:explore_widget/page_route.dart';
 import 'package:explore_widget/pub_dev/camera/camera2_activity.dart';
 import 'package:explore_widget/pub_dev/camera/camera_activity.dart';
@@ -187,6 +188,10 @@ class MyApp extends StatelessWidget {
         // return CustomPageRoute(page: LayoutGrid1Activity());
         // return CustomPageRoute(page: LayoutGrid2Activity());
         return CustomPageRoute(page: LayoutGrid3Activity());
+      case linkWidgetBindingObserver:
+        // return CustomPageRoute(page: LayoutGrid1Activity());
+        // return CustomPageRoute(page: LayoutGrid2Activity());
+        return CustomPageRoute(page: WidgetBindingExample());
     }
     return CustomPageRoute(page: MainActivity());
   }

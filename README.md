@@ -46,5 +46,6 @@ Explore All Widgets and Layout Behavior
 <h2>🔭 On Progress / todo list </h2>
 
 - Focus
-- Lottie
-- Rive
+- IgnorePointer
+- Freezed (pub.dev)
+- 
