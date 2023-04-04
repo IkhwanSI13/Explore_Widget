@@ -14,6 +14,7 @@ import 'package:explore_widget/pub_dev/flutter_layout_grid/layout_grid3_activity
 import 'package:explore_widget/pub_dev/flutter_rating_bar/flutter_rating_bar_activity.dart';
 import 'package:explore_widget/pub_dev/lottie/lottie_activity.dart';
 import 'package:explore_widget/pub_dev/rive/rive_activity.dart';
+import 'package:explore_widget/pub_dev/superEditor/super_editor_activity.dart';
 import 'package:explore_widget/widget/animation/animated_list_activity.dart';
 import 'package:explore_widget/widget/animation/animation_activity.dart';
 import 'package:explore_widget/widget/auto_complete/auto_complete_activity.dart';
@@ -192,6 +193,8 @@ class MyApp extends StatelessWidget {
         // return CustomPageRoute(page: LayoutGrid1Activity());
         // return CustomPageRoute(page: LayoutGrid2Activity());
         return CustomPageRoute(page: WidgetBindingExample());
+      case linkSuperEditor:
+        return CustomPageRoute(page: SuperEditorActivity());
     }
     return CustomPageRoute(page: MainActivity());
   }

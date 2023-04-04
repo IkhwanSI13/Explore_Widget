@@ -1,6 +1,7 @@
 # explore_widget
 
-Explore All Widgets and Layout Behavior
+- Flutter Dart tips & trick 
+- Explore All Widgets and Layout Behavior
 
 <h2>💻 Covered</h2>
 
@@ -43,9 +44,12 @@ Explore All Widgets and Layout Behavior
 
 - [flutter_rating_bar](https://pub.dev/packages/flutter_rating_bar)
 
-<h2>🔭 On Progress / todo list </h2>
+<h2>🔭 On Progress</h2>
+
+- [super_editor](https://pub.dev/packages/super_editor)
+
+<h2>🔭 todo list </h2>
 
 - Focus
 - IgnorePointer
 - Freezed (pub.dev)
-- 

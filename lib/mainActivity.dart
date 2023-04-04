@@ -155,6 +155,9 @@ class MainActivity extends StatelessWidget {
         MyButton("flutter_layout_grid", () {
           Navigator.of(context).pushNamed(linkFlutterLayoutGrid);
         }),
+        MyButton("super_editor", () {
+          Navigator.of(context).pushNamed(linkSuperEditor);
+        }),
       ];
 
   ///

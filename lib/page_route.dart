@@ -44,6 +44,7 @@ const linkSliverList = "/SliverList";
 const linkStack = "/Stack";
 const linkStatefulBuilder = "/StatefulBuilder";
 const linkStreamBuilder = "/StreamBuilder";
+const linkSuperEditor = "/SuperEditor";
 const linkTable = "/Table";
 const linkTooltip = "/Tooltip";
 const linkOpacity = "/Opacity";
