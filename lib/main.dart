@@ -1,4 +1,8 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:explore_widget/devtools/flutter_inspector/inspector_widget.dart';
+import 'package:explore_widget/devtools/logging/logging_widget.dart';
+import 'package:explore_widget/devtools/memory/memory_widget.dart';
+import 'package:explore_widget/devtools/network/network_widget.dart';
 import 'package:explore_widget/key.dart';
 import 'package:explore_widget/mainActivity.dart';
 import 'package:explore_widget/non_widget/linear_gradient/linear_gradient_activity.dart';
@@ -195,6 +199,14 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: WidgetBindingExample());
       case linkSuperEditor:
         return CustomPageRoute(page: SuperEditorActivity());
+      case linkDevToolsFlutterInspector:
+        return CustomPageRoute(page: InspectorWidget());
+      case linkDevToolsLogging:
+        return CustomPageRoute(page: LoggingWidget());
+      case linkDevToolsMemory:
+        return CustomPageRoute(page: MemoryWidget());
+      case linkDevToolsNetwork:
+        return CustomPageRoute(page: NetworkWidget());
     }
     return CustomPageRoute(page: MainActivity());
   }

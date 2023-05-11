@@ -19,8 +19,6 @@ class LoadingActivityState extends State<LoadingActivity> {
 
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
         title: Text(
           "Loading",
           style: TextStyle(color: Colors.black),

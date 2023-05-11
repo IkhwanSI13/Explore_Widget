@@ -10,6 +10,8 @@ class MainActivity extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+              myTitle("DevTools"),
+              ..._getDevToolsWidget(context),
               myTitle("Flutter Sdk Widget"),
               ..._getFlutterSdkWidget(context),
               myTitle("Flutter Sdk non Widget"),
@@ -20,6 +22,21 @@ class MainActivity extends StatelessWidget {
           ),
         ),
       );
+
+  List<Widget> _getDevToolsWidget(BuildContext context) => [
+    MyButton("Flutter Inspector", () {
+      Navigator.of(context).pushNamed(linkDevToolsFlutterInspector);
+    }),
+    MyButton("Logging View", () {
+      Navigator.of(context).pushNamed(linkDevToolsLogging);
+    }),
+    MyButton("Memory View", () {
+      Navigator.of(context).pushNamed(linkDevToolsMemory);
+    }),
+    MyButton("Network View", () {
+      Navigator.of(context).pushNamed(linkDevToolsNetwork);
+    }),
+  ];
 
   List<Widget> _getFlutterSdkWidget(BuildContext context) => [
         MyButton("Column", () {
