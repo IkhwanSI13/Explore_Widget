@@ -52,8 +52,9 @@ const linkSuperEditor = "/SuperEditor";
 const linkTable = "/Table";
 const linkTooltip = "/Tooltip";
 const linkOpacity = "/Opacity";
-const linkWrap = "/Wrap";
+const linkWebViewFlutter = "/WebViewFlutter";
 const linkWidgetBindingObserver = "/WidgetBindingObserver";
+const linkWrap = "/Wrap";
 const linkWrapVertical = "/WrapVertical";
 const linkWrapHorizontal = "/WrapHorizontal";
 

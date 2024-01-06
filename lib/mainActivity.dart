@@ -175,6 +175,9 @@ class MainActivity extends StatelessWidget {
         MyButton("super_editor", () {
           Navigator.of(context).pushNamed(linkSuperEditor);
         }),
+        MyButton("webview_flutter", () {
+          Navigator.of(context).pushNamed(linkWebViewFlutter);
+        }),
       ];
 
   ///

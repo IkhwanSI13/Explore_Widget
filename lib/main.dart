@@ -19,6 +19,7 @@ import 'package:explore_widget/pub_dev/flutter_rating_bar/flutter_rating_bar_act
 import 'package:explore_widget/pub_dev/lottie/lottie_activity.dart';
 import 'package:explore_widget/pub_dev/rive/rive_activity.dart';
 import 'package:explore_widget/pub_dev/superEditor/super_editor_activity.dart';
+import 'package:explore_widget/pub_dev/webView/webview_activity.dart';
 import 'package:explore_widget/widget/animation/animated_list_activity.dart';
 import 'package:explore_widget/widget/animation/animation_activity.dart';
 import 'package:explore_widget/widget/auto_complete/auto_complete_activity.dart';
@@ -207,6 +208,8 @@ class MyApp extends StatelessWidget {
         return CustomPageRoute(page: MemoryWidget());
       case linkDevToolsNetwork:
         return CustomPageRoute(page: NetworkWidget());
+      case linkWebViewFlutter:
+        return CustomPageRoute(page: WebViewActivity());
     }
     return CustomPageRoute(page: MainActivity());
   }

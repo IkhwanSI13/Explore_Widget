@@ -142,7 +142,7 @@ class _SuperEditorActivityState extends State<SuperEditorActivity> {
 
       // Display the toolbar in the application overlay.
       final overlay = Overlay.of(context);
-      overlay.insert(_textFormatBarOverlayEntry!);
+      // overlay.insert(_textFormatBarOverlayEntry!);
     }
 
     // Schedule a callback after this frame to locate the selection
@@ -256,7 +256,7 @@ class _SuperEditorActivityState extends State<SuperEditorActivity> {
 
       // Display the toolbar in the application overlay.
       final overlay = Overlay.of(context);
-      overlay.insert(_imageFormatBarOverlayEntry!);
+      // overlay.insert(_imageFormatBarOverlayEntry!);
     }
 
     // Schedule a callback after this frame to locate the selection

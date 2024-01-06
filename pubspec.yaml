@@ -13,17 +13,18 @@ dependencies:
 
   device_preview: ^1.1.0
 
-  flutter_rating_bar: ^4.0.1
-  lottie: ^2.0.0
-  rive: ^0.10.1
   camera: ^0.10.1 #official
-  video_player: ^2.4.10 #official
   camerawesome:
     git:
       url: https://github.com/Apparence-io/camera_awesome
       ref: 3ca70b46387e46c67b90e4f6eef40f6c3f49de07
   flutter_layout_grid: ^2.0.1
+  flutter_rating_bar: ^4.0.1
+  lottie: ^2.0.0
+  rive: ^0.10.1
   super_editor: ^0.2.3+1
+  video_player: ^2.4.10 #official
+  webview_flutter: ^4.2.0
 
   path_provider: ^2.0.2 #official
 
